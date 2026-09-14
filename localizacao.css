@@ -1,0 +1,1483 @@
+/* =========================================================
+   AURÉA — LOCALIZAÇÃO
+========================================================= */
+
+
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
+
+:root {
+  --cream: #f4f0e8;
+  --cream-soft: #ebe5da;
+
+  --green: #1e2924;
+  --green-dark: #111815;
+
+  --gold: #b89a67;
+
+  --text:
+    rgba(
+      30,
+      41,
+      36,
+      0.64
+    );
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background:
+    var(--cream);
+
+  color:
+    var(--green);
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing:
+    antialiased;
+}
+
+img {
+  display: block;
+
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.localizacao-container {
+  width:
+    min(
+      calc(100% - 140px),
+      1440px
+    );
+
+  margin:
+    0 auto;
+}
+
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+.section-label,
+.localizacao-eyebrow {
+  display: block;
+
+  margin-bottom: 24px;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.28em;
+
+  text-transform: uppercase;
+
+  color:
+    var(--gold);
+}
+
+.section-label.light {
+  color:
+    #d7be8d;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.localizacao-hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    var(--green-dark);
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.localizacao-hero-image {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+}
+
+.localizacao-hero-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center center;
+
+  transform:
+    scale(1.08);
+
+  transform-origin:
+    center center;
+}
+
+
+/* =========================================================
+   HERO OVERLAY
+========================================================= */
+
+.localizacao-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(7, 11, 9, 0.80) 0%,
+      rgba(7, 11, 9, 0.43) 42%,
+      rgba(7, 11, 9, 0.08) 78%
+    ),
+
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.16),
+      transparent 40%,
+      rgba(0, 0, 0, 0.26)
+    );
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.localizacao-hero-content {
+  position: relative;
+
+  z-index: 3;
+
+  width:
+    min(
+      calc(100% - 140px),
+      1440px
+    );
+
+  margin:
+    110px auto 0;
+
+  color:
+    var(--cream);
+}
+
+.localizacao-hero-content h1 {
+  margin: 0;
+
+  max-width: 760px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      72px,
+      7.2vw,
+      120px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.84;
+
+  letter-spacing: -0.04em;
+}
+
+.localizacao-hero-content h1 em {
+  display: block;
+
+  color:
+    #dfc491;
+
+  font-style: italic;
+}
+
+.localizacao-hero-content > p {
+  max-width: 460px;
+
+  margin-top: 32px;
+
+  font-size: 13px;
+
+  font-weight: 300;
+
+  line-height: 1.9;
+
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.76
+    );
+}
+
+
+/* =========================================================
+   HERO LINK
+========================================================= */
+
+.localizacao-hero-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 35px;
+
+  margin-top: 35px;
+
+  padding-bottom: 7px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      244,
+      240,
+      232,
+      0.45
+    );
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  color:
+    var(--cream);
+
+  transition:
+    gap
+    0.3s ease;
+}
+
+.localizacao-hero-link:hover {
+  gap: 45px;
+}
+
+
+/* =========================================================
+   SIDE NOTE
+========================================================= */
+
+.localizacao-side-note {
+  position: absolute;
+
+  z-index: 3;
+
+  right: 6vw;
+  bottom: 65px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  font-size: 8px;
+
+  line-height: 1.7;
+
+  letter-spacing: 0.18em;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.72
+    );
+}
+
+
+/* =========================================================
+   DESTINO
+========================================================= */
+
+.destino-section {
+  padding:
+    clamp(
+      120px,
+      12vw,
+      190px
+    )
+    0;
+
+  background:
+    var(--cream);
+}
+
+.destino-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.25fr)
+    minmax(280px, 0.55fr);
+
+  gap:
+    clamp(
+      70px,
+      10vw,
+      170px
+    );
+
+  align-items: end;
+}
+
+.destino-grid h2 {
+  margin: 0;
+
+  max-width: 860px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      64px,
+      6.2vw,
+      102px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.035em;
+}
+
+.destino-grid h2 em {
+  display: block;
+
+  color:
+    var(--gold);
+
+  font-style: italic;
+}
+
+.destino-copy {
+  max-width: 470px;
+}
+
+.destino-copy p {
+  margin:
+    0
+    0
+    22px;
+
+  font-size: 13px;
+
+  font-weight: 300;
+
+  line-height: 1.95;
+
+  color:
+    var(--text);
+}
+
+
+/* =========================================================
+   COMO CHEGAR
+========================================================= */
+
+.chegar-section {
+  padding:
+    120px
+    0;
+
+  background:
+    var(--cream-soft);
+}
+
+.chegar-heading {
+  max-width: 850px;
+
+  margin-bottom: 70px;
+}
+
+.chegar-heading h2 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      62px,
+      6vw,
+      100px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.89;
+
+  letter-spacing: -0.035em;
+}
+
+.chegar-heading h2 em {
+  display: block;
+
+  color:
+    var(--gold);
+
+  font-style: italic;
+}
+
+.chegar-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      1fr
+    );
+
+  border-top:
+    1px solid
+    rgba(
+      30,
+      41,
+      36,
+      0.14
+    );
+}
+
+.chegar-card {
+  min-height: 340px;
+
+  padding:
+    38px
+    35px
+    40px
+    0;
+
+  border-right:
+    1px solid
+    rgba(
+      30,
+      41,
+      36,
+      0.11
+    );
+}
+
+.chegar-card:not(:first-child) {
+  padding-left: 35px;
+}
+
+.chegar-card:last-child {
+  border-right: 0;
+}
+
+.chegar-number {
+  display: block;
+
+  font-size: 8px;
+
+  letter-spacing: 0.14em;
+
+  color:
+    var(--gold);
+}
+
+.chegar-card h3 {
+  margin:
+    34px
+    0
+    0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 42px;
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.chegar-card p {
+  max-width: 330px;
+
+  margin-top: 20px;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+
+  color:
+    var(--text);
+}
+
+.chegar-detail {
+  display: block;
+
+  margin-top: 35px;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+
+  color:
+    rgba(
+      30,
+      41,
+      36,
+      0.48
+    );
+}
+
+
+/* =========================================================
+   MAP SECTION
+========================================================= */
+
+.map-section {
+  padding:
+    clamp(
+      120px,
+      11vw,
+      180px
+    )
+    0;
+
+  background:
+    var(--green-dark);
+
+  color:
+    var(--cream);
+}
+
+.map-layout {
+  display: grid;
+
+  grid-template-columns:
+    0.8fr
+    1.2fr;
+
+  gap:
+    clamp(
+      70px,
+      8vw,
+      140px
+    );
+
+  align-items: center;
+}
+
+.map-copy h2 {
+  margin: 0;
+
+  max-width: 560px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      60px,
+      5.7vw,
+      95px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.035em;
+}
+
+.map-copy h2 em {
+  display: block;
+
+  color:
+    #dfc28f;
+
+  font-style: italic;
+}
+
+.map-copy > p {
+  max-width: 450px;
+
+  margin-top: 30px;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.66
+    );
+}
+
+.map-address {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  margin-top: 40px;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.17em;
+
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.60
+    );
+}
+
+
+/* =========================================================
+   MAP PLACEHOLDER
+========================================================= */
+
+.map-placeholder {
+  position: relative;
+
+  min-height: 520px;
+
+  border:
+    1px solid
+    rgba(
+      244,
+      240,
+      232,
+      0.14
+    );
+
+  background:
+    radial-gradient(
+      circle at 55% 45%,
+      rgba(184, 154, 103, 0.18),
+      transparent 26%
+    ),
+    linear-gradient(
+      135deg,
+      #15231d,
+      #0e1612
+    );
+
+  overflow: hidden;
+}
+
+.map-placeholder::before,
+.map-placeholder::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.10;
+}
+
+.map-placeholder::before {
+  background:
+    repeating-linear-gradient(
+      30deg,
+      transparent 0,
+      transparent 46px,
+      rgba(255, 255, 255, 0.14) 47px,
+      transparent 48px
+    );
+}
+
+.map-placeholder::after {
+  background:
+    repeating-linear-gradient(
+      -35deg,
+      transparent 0,
+      transparent 65px,
+      rgba(255, 255, 255, 0.10) 66px,
+      transparent 67px
+    );
+}
+
+.map-marker {
+  position: absolute;
+
+  z-index: 2;
+
+  left: 55%;
+  top: 48%;
+
+  transform:
+    translate(
+      -50%,
+      -50%
+    );
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 8px;
+
+  text-align: center;
+}
+
+.map-dot {
+  width: 11px;
+  height: 11px;
+
+  margin-bottom: 10px;
+
+  border-radius: 50%;
+
+  background:
+    var(--gold);
+
+  box-shadow:
+    0
+    0
+    0
+    8px
+    rgba(
+      184,
+      154,
+      103,
+      0.12
+    );
+}
+
+.map-marker strong {
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 28px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.04em;
+}
+
+.map-marker > span:last-child {
+  font-size: 8px;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.58
+    );
+}
+
+
+/* =========================================================
+   AO REDOR
+========================================================= */
+
+.around-section {
+  padding:
+    clamp(
+      120px,
+      11vw,
+      180px
+    )
+    0;
+
+  background:
+    var(--cream);
+}
+
+.around-heading {
+  max-width: 830px;
+
+  margin-bottom: 75px;
+}
+
+.around-heading h2 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      62px,
+      6vw,
+      100px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.035em;
+}
+
+.around-heading h2 em {
+  display: block;
+
+  color:
+    var(--gold);
+
+  font-style: italic;
+}
+
+.around-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      1fr
+    );
+
+  border-top:
+    1px solid
+    rgba(
+      30,
+      41,
+      36,
+      0.14
+    );
+}
+
+.around-item {
+  min-height: 330px;
+
+  padding:
+    35px
+    30px
+    40px
+    0;
+
+  border-right:
+    1px solid
+    rgba(
+      30,
+      41,
+      36,
+      0.11
+    );
+}
+
+.around-item:not(:first-child) {
+  padding-left: 30px;
+}
+
+.around-item:last-child {
+  border-right: 0;
+}
+
+.around-item > span {
+  font-size: 8px;
+
+  color:
+    var(--gold);
+}
+
+.around-item h3 {
+  margin:
+    38px
+    0
+    0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 40px;
+
+  font-weight: 400;
+}
+
+.around-item p {
+  max-width: 260px;
+
+  margin-top: 18px;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+
+  color:
+    var(--text);
+}
+
+
+/* =========================================================
+   ESTAÇÕES
+========================================================= */
+
+.seasons-section {
+  padding:
+    clamp(
+      120px,
+      11vw,
+      180px
+    )
+    0;
+
+  background:
+    #ebe5da;
+}
+
+.seasons-heading {
+  max-width: 900px;
+
+  margin-bottom: 75px;
+}
+
+.seasons-heading h2 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      62px,
+      6vw,
+      100px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.035em;
+}
+
+.seasons-heading h2 em {
+  display: block;
+
+  color:
+    var(--gold);
+
+  font-style: italic;
+}
+
+.seasons-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      1fr
+    );
+
+  border-top:
+    1px solid
+    rgba(
+      30,
+      41,
+      36,
+      0.14
+    );
+}
+
+.season-card {
+  min-height: 330px;
+
+  padding:
+    35px
+    30px
+    40px
+    0;
+
+  border-right:
+    1px solid
+    rgba(
+      30,
+      41,
+      36,
+      0.11
+    );
+}
+
+.season-card:not(:first-child) {
+  padding-left: 30px;
+}
+
+.season-card:last-child {
+  border-right: 0;
+}
+
+.season-number {
+  display: block;
+
+  font-size: 8px;
+
+  color:
+    var(--gold);
+}
+
+.season-card h3 {
+  margin:
+    38px
+    0
+    0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 40px;
+
+  font-weight: 400;
+}
+
+.season-card p {
+  max-width: 260px;
+
+  margin-top: 18px;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+
+  color:
+    var(--text);
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.localizacao-final {
+  min-height: 80vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    120px
+    30px;
+
+  text-align: center;
+
+  background:
+    var(--green-dark);
+
+  color:
+    var(--cream);
+}
+
+.localizacao-final-content {
+  max-width: 900px;
+}
+
+.localizacao-final h2 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      75px,
+      9vw,
+      135px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.80;
+
+  letter-spacing: -0.04em;
+}
+
+.localizacao-final h2 em {
+  display: block;
+
+  color:
+    var(--gold);
+
+  font-style: italic;
+}
+
+.localizacao-final p {
+  max-width: 450px;
+
+  margin:
+    38px
+    auto
+    0;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.67
+    );
+}
+
+.localizacao-final-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 50px;
+
+  min-width: 285px;
+
+  margin-top: 40px;
+
+  padding:
+    19px
+    23px;
+
+  background:
+    var(--cream);
+
+  color:
+    var(--green);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  transition:
+    transform
+    0.3s ease,
+    background
+    0.3s ease;
+}
+
+.localizacao-final-button:hover {
+  transform:
+    translateY(-2px);
+
+  background:
+    #ffffff;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .localizacao-container,
+  .localizacao-hero-content {
+    width:
+      calc(
+        100% - 80px
+      );
+  }
+
+
+  .destino-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 50px;
+  }
+
+
+  .chegar-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .chegar-card,
+  .chegar-card:not(:first-child) {
+    min-height: auto;
+
+    padding:
+      35px
+      0;
+
+    border-right: 0;
+
+    border-bottom:
+      1px solid
+      rgba(
+        30,
+        41,
+        36,
+        0.11
+      );
+  }
+
+
+  .map-layout {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .around-grid,
+  .seasons-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        1fr
+      );
+  }
+
+
+  .around-item:nth-child(2),
+  .season-card:nth-child(2) {
+    border-right: 0;
+  }
+
+
+  .around-item:nth-child(3),
+  .around-item:nth-child(4),
+  .season-card:nth-child(3),
+  .season-card:nth-child(4) {
+    border-top:
+      1px solid
+      rgba(
+        30,
+        41,
+        36,
+        0.11
+      );
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .localizacao-container,
+  .localizacao-hero-content {
+    width:
+      calc(
+        100% - 40px
+      );
+  }
+
+
+  .localizacao-hero {
+    min-height:
+      760px;
+  }
+
+
+  .localizacao-hero-content {
+    margin-top:
+      70px;
+  }
+
+
+  .localizacao-hero-content h1 {
+    font-size:
+      clamp(
+        56px,
+        15vw,
+        82px
+      );
+  }
+
+
+  .localizacao-side-note {
+    display: none;
+  }
+
+
+  .destino-section {
+    padding:
+      100px
+      0;
+  }
+
+
+  .destino-grid h2,
+  .chegar-heading h2,
+  .around-heading h2,
+  .seasons-heading h2 {
+    font-size:
+      clamp(
+        54px,
+        14vw,
+        78px
+      );
+  }
+
+
+  .chegar-section,
+  .around-section,
+  .seasons-section {
+    padding:
+      100px
+      0;
+  }
+
+
+  .map-section {
+    padding:
+      100px
+      0;
+  }
+
+
+  .map-copy h2 {
+    font-size:
+      clamp(
+        54px,
+        14vw,
+        78px
+      );
+  }
+
+
+  .map-placeholder {
+    min-height: 420px;
+  }
+
+
+  .around-grid,
+  .seasons-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .around-item,
+  .around-item:not(:first-child),
+  .season-card,
+  .season-card:not(:first-child) {
+    min-height: auto;
+
+    padding:
+      35px
+      0;
+
+    border-right: 0;
+
+    border-bottom:
+      1px solid
+      rgba(
+        30,
+        41,
+        36,
+        0.11
+      );
+  }
+
+
+  .around-item:nth-child(3),
+  .around-item:nth-child(4),
+  .season-card:nth-child(3),
+  .season-card:nth-child(4) {
+    border-top: 0;
+  }
+
+
+  .localizacao-final {
+    min-height:
+      700px;
+  }
+
+
+  .localizacao-final h2 {
+    font-size:
+      clamp(
+        60px,
+        16vw,
+        88px
+      );
+  }
+
+}

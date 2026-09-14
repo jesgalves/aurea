@@ -1,0 +1,1740 @@
+/* =========================================================
+   AURÉA — EXPERIÊNCIAS
+========================================================= */
+
+
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
+
+:root {
+  --cream: #f4f0e8;
+  --cream-soft: #ece6dc;
+
+  --green: #1e2924;
+  --green-dark: #111815;
+
+  --gold: #b89a67;
+
+  --text:
+    rgba(
+      30,
+      41,
+      36,
+      0.64
+    );
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background:
+    var(--cream);
+
+  color:
+    var(--green);
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing:
+    antialiased;
+}
+
+img {
+  display: block;
+
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.experiencias-container {
+  width:
+    min(
+      calc(100% - 140px),
+      1440px
+    );
+
+  margin:
+    0 auto;
+}
+
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+.section-label,
+.experiencias-eyebrow {
+  display: block;
+
+  margin-bottom: 24px;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.28em;
+
+  text-transform: uppercase;
+
+  color:
+    var(--gold);
+}
+
+.section-label.light {
+  color:
+    #d7be8d;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.experiencias-hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    var(--green-dark);
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.experiencias-hero-image {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+}
+
+.experiencias-hero-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center center;
+
+  transform:
+    scale(1.10);
+
+  transform-origin:
+    center center;
+}
+
+
+/* =========================================================
+   HERO OVERLAY
+========================================================= */
+
+.experiencias-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(7, 11, 9, 0.80) 0%,
+      rgba(7, 11, 9, 0.45) 42%,
+      rgba(7, 11, 9, 0.10) 78%
+    ),
+
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.18),
+      transparent 38%,
+      rgba(0, 0, 0, 0.24)
+    );
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.experiencias-hero-content {
+  position: relative;
+
+  z-index: 3;
+
+  width:
+    min(
+      calc(100% - 140px),
+      1440px
+    );
+
+  margin:
+    110px auto 0;
+
+  color:
+    var(--cream);
+}
+
+.experiencias-hero-content h1 {
+  margin: 0;
+
+  max-width: 720px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      72px,
+      7vw,
+      120px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.84;
+
+  letter-spacing: -0.04em;
+}
+
+.experiencias-hero-content h1 em {
+  display: block;
+
+  color:
+    #dfc491;
+
+  font-style: italic;
+}
+
+.experiencias-hero-content > p {
+  max-width: 470px;
+
+  margin-top: 32px;
+
+  font-size: 13px;
+
+  font-weight: 300;
+
+  line-height: 1.9;
+
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.76
+    );
+}
+
+
+/* =========================================================
+   HERO LINK
+========================================================= */
+
+.experiencias-hero-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 35px;
+
+  margin-top: 35px;
+
+  padding-bottom: 7px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      244,
+      240,
+      232,
+      0.48
+    );
+
+  color:
+    var(--cream);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  transition:
+    gap
+    0.3s ease;
+}
+
+.experiencias-hero-link:hover {
+  gap: 45px;
+}
+
+
+/* =========================================================
+   HERO SIDE NOTE
+========================================================= */
+
+.experiencias-side-note {
+  position: absolute;
+
+  z-index: 3;
+
+  right: 6vw;
+  bottom: 65px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  font-size: 8px;
+
+  line-height: 1.7;
+
+  letter-spacing: 0.18em;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.75
+    );
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.experiencias-intro {
+  padding:
+    clamp(
+      120px,
+      12vw,
+      190px
+    )
+    0;
+
+  background:
+    var(--cream);
+}
+
+.experiencias-intro-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.25fr)
+    minmax(280px, 0.55fr);
+
+  gap:
+    clamp(
+      70px,
+      10vw,
+      170px
+    );
+
+  align-items: end;
+}
+
+.experiencias-intro h2 {
+  margin: 0;
+
+  max-width: 900px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      62px,
+      6vw,
+      100px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.90;
+
+  letter-spacing: -0.035em;
+}
+
+.experiencias-intro h2 em {
+  display: block;
+
+  color:
+    var(--gold);
+
+  font-style: italic;
+}
+
+.experiencias-intro-copy {
+  max-width: 470px;
+}
+
+.experiencias-intro-copy p {
+  margin:
+    0
+    0
+    22px;
+
+  font-size: 13px;
+
+  font-weight: 300;
+
+  line-height: 1.95;
+
+  color:
+    var(--text);
+}
+
+
+/* =========================================================
+   EXPERIENCE FEATURE
+========================================================= */
+
+.experience-feature {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.35fr)
+    minmax(320px, 0.65fr);
+
+  min-height: 760px;
+
+  background:
+    var(--cream-soft);
+}
+
+.experience-feature-reverse {
+  grid-template-columns:
+    minmax(320px, 0.65fr)
+    minmax(0, 1.35fr);
+}
+
+
+/* =========================================================
+   FEATURE IMAGE
+========================================================= */
+
+.experience-feature-image {
+  min-height: 760px;
+
+  overflow: hidden;
+}
+
+.experience-feature-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform:
+    scale(1.07);
+
+  transition:
+    transform
+    0.9s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    );
+}
+
+.experience-feature-image:hover img {
+  transform:
+    scale(1.10);
+}
+
+
+/* =========================================================
+   FEATURE CONTENT
+========================================================= */
+
+.experience-feature-content {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding:
+    80px
+    clamp(
+      50px,
+      6vw,
+      110px
+    );
+
+  background:
+    var(--cream);
+}
+
+.experience-feature-reverse
+.experience-feature-image {
+  order: 2;
+}
+
+.experience-feature-reverse
+.experience-feature-content {
+  order: 1;
+
+  background:
+    var(--green);
+
+  color:
+    var(--cream);
+}
+
+
+/* =========================================================
+   EXPERIENCE NUMBER
+========================================================= */
+
+.experience-number {
+  display: block;
+
+  margin-bottom: 14px;
+
+  font-size: 9px;
+
+  letter-spacing: 0.16em;
+
+  color:
+    rgba(
+      30,
+      41,
+      36,
+      0.44
+    );
+}
+
+.experience-number.light {
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.62
+    );
+}
+
+
+/* =========================================================
+   FEATURE TITLE
+========================================================= */
+
+.experience-feature-content h2 {
+  margin: 0;
+
+  max-width: 520px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      52px,
+      4.8vw,
+      82px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.03em;
+}
+
+.experience-feature-content h2 em {
+  display: block;
+
+  color:
+    var(--gold);
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   FEATURE TEXT
+========================================================= */
+
+.experience-feature-content > p {
+  max-width: 450px;
+
+  margin-top: 30px;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+
+  color:
+    var(--text);
+}
+
+.experience-feature-reverse
+.experience-feature-content > p {
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.68
+    );
+}
+
+
+/* =========================================================
+   FEATURE LIST
+========================================================= */
+
+.experience-feature-content ul {
+  margin:
+    35px
+    0
+    0;
+
+  padding: 0;
+
+  max-width: 440px;
+
+  list-style: none;
+
+  border-top:
+    1px solid
+    rgba(
+      30,
+      41,
+      36,
+      0.16
+    );
+}
+
+.experience-feature-content li {
+  padding:
+    13px
+    0;
+
+  border-bottom:
+    1px solid
+    rgba(
+      30,
+      41,
+      36,
+      0.11
+    );
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  color:
+    rgba(
+      30,
+      41,
+      36,
+      0.74
+    );
+}
+
+.experience-feature-reverse
+.experience-feature-content ul {
+  border-top-color:
+    rgba(
+      244,
+      240,
+      232,
+      0.18
+    );
+}
+
+.experience-feature-reverse
+.experience-feature-content li {
+  border-bottom-color:
+    rgba(
+      244,
+      240,
+      232,
+      0.13
+    );
+
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.75
+    );
+}
+
+
+/* =========================================================
+   FIRE SECTION
+========================================================= */
+
+.fire-section {
+  position: relative;
+
+  min-height: 90vh;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    var(--green-dark);
+}
+
+.fire-image {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+}
+
+.fire-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position:
+    center center;
+
+  transform:
+    scale(1.14);
+}
+
+.fire-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(7, 11, 9, 0.78),
+      rgba(7, 11, 9, 0.34) 50%,
+      rgba(7, 11, 9, 0.08)
+    ),
+
+    linear-gradient(
+      0deg,
+      rgba(7, 11, 9, 0.22),
+      transparent
+    );
+}
+
+.fire-content {
+  position: relative;
+
+  z-index: 2;
+
+  width:
+    min(
+      calc(100% - 140px),
+      1440px
+    );
+
+  margin:
+    0 auto;
+
+  color:
+    var(--cream);
+}
+
+.fire-content h2 {
+  margin: 0;
+
+  max-width: 760px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      65px,
+      7vw,
+      110px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.86;
+
+  letter-spacing: -0.04em;
+}
+
+.fire-content h2 em {
+  display: block;
+
+  color:
+    #dfc18e;
+
+  font-style: italic;
+}
+
+.fire-content > p {
+  max-width: 470px;
+
+  margin-top: 30px;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.72
+    );
+}
+
+
+/* =========================================================
+   CAFE SECTION
+========================================================= */
+
+.cafe-section {
+  padding:
+    clamp(
+      120px,
+      11vw,
+      180px
+    )
+    0;
+
+  background:
+    var(--cream);
+}
+
+.cafe-heading {
+  max-width: 850px;
+
+  margin-bottom: 65px;
+}
+
+.cafe-heading h2 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      65px,
+      6.7vw,
+      108px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.87;
+
+  letter-spacing: -0.04em;
+}
+
+.cafe-heading h2 em {
+  display: block;
+
+  color:
+    var(--gold);
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   CAFE IMAGE
+========================================================= */
+
+.cafe-image {
+  width: 100%;
+
+  height:
+    clamp(
+      520px,
+      60vw,
+      800px
+    );
+
+  overflow: hidden;
+}
+
+.cafe-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform:
+    scale(1.04);
+}
+
+
+/* =========================================================
+   CAFE BOTTOM
+========================================================= */
+
+.cafe-bottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 70px;
+
+  margin-top: 45px;
+}
+
+.cafe-bottom > p {
+  max-width: 430px;
+
+  margin: 0;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+
+  color:
+    var(--text);
+}
+
+.cafe-details {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: flex-end;
+
+  flex-wrap: wrap;
+
+  gap:
+    15px 35px;
+}
+
+.cafe-details span {
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+
+  color:
+    rgba(
+      30,
+      41,
+      36,
+      0.58
+    );
+}
+
+
+/* =========================================================
+   GASTRONOMY EXPERIENCE
+========================================================= */
+
+.experience-gastronomy {
+  position: relative;
+
+  min-height: 88vh;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    var(--green-dark);
+}
+
+.experience-gastronomy-image {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+}
+
+.experience-gastronomy-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform:
+    scale(1.14);
+}
+
+.experience-gastronomy-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(7, 11, 9, 0.80),
+      rgba(7, 11, 9, 0.38) 48%,
+      rgba(7, 11, 9, 0.10)
+    );
+}
+
+.experience-gastronomy-content {
+  position: relative;
+
+  z-index: 2;
+
+  width:
+    min(
+      calc(100% - 140px),
+      1440px
+    );
+
+  margin:
+    0 auto;
+
+  color:
+    var(--cream);
+}
+
+.experience-gastronomy-content h2 {
+  margin: 0;
+
+  max-width: 720px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      65px,
+      7vw,
+      110px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.86;
+
+  letter-spacing: -0.04em;
+}
+
+.experience-gastronomy-content h2 em {
+  display: block;
+
+  color:
+    #ddc18e;
+
+  font-style: italic;
+}
+
+.experience-gastronomy-content > p {
+  max-width: 470px;
+
+  margin-top: 30px;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.72
+    );
+}
+
+.experience-gastronomy-content > a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 35px;
+
+  margin-top: 30px;
+
+  padding-bottom: 7px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      244,
+      240,
+      232,
+      0.4
+    );
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+
+  transition:
+    gap
+    0.3s ease;
+}
+
+.experience-gastronomy-content > a:hover {
+  gap: 45px;
+}
+
+
+/* =========================================================
+   RHYTHM
+========================================================= */
+
+.rhythm-section {
+  padding:
+    clamp(
+      120px,
+      11vw,
+      180px
+    )
+    0;
+
+  background:
+    var(--cream);
+}
+
+.rhythm-heading {
+  max-width: 850px;
+
+  margin-bottom: 75px;
+}
+
+.rhythm-heading h2 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      65px,
+      6.7vw,
+      105px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.04em;
+}
+
+.rhythm-heading h2 em {
+  display: block;
+
+  color:
+    var(--gold);
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   RHYTHM GRID
+========================================================= */
+
+.rhythm-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      1fr
+    );
+
+  border-top:
+    1px solid
+    rgba(
+      30,
+      41,
+      36,
+      0.14
+    );
+}
+
+.rhythm-item {
+  min-height: 350px;
+
+  padding:
+    35px
+    30px
+    40px
+    0;
+
+  border-right:
+    1px solid
+    rgba(
+      30,
+      41,
+      36,
+      0.11
+    );
+}
+
+.rhythm-item:not(:first-child) {
+  padding-left: 30px;
+}
+
+.rhythm-item:last-child {
+  border-right: 0;
+}
+
+.rhythm-number {
+  display: block;
+
+  font-size: 8px;
+
+  color:
+    var(--gold);
+}
+
+.rhythm-time {
+  display: block;
+
+  margin-top: 40px;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.20em;
+
+  color:
+    rgba(
+      30,
+      41,
+      36,
+      0.50
+    );
+}
+
+.rhythm-item h3 {
+  margin:
+    20px
+    0
+    0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 34px;
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.rhythm-item p {
+  margin-top: 18px;
+
+  max-width: 250px;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+
+  color:
+    var(--text);
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.experiencias-final {
+  min-height: 80vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    120px
+    30px;
+
+  text-align: center;
+
+  background:
+    var(--green-dark);
+
+  color:
+    var(--cream);
+}
+
+.experiencias-final-content {
+  max-width: 900px;
+}
+
+.experiencias-final h2 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      75px,
+      9vw,
+      135px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.80;
+
+  letter-spacing: -0.04em;
+}
+
+.experiencias-final h2 em {
+  display: block;
+
+  color:
+    var(--gold);
+
+  font-style: italic;
+}
+
+.experiencias-final p {
+  max-width: 450px;
+
+  margin:
+    38px
+    auto
+    0;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.67
+    );
+}
+
+.experiencias-final-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 50px;
+
+  min-width: 285px;
+
+  margin-top: 40px;
+
+  padding:
+    19px
+    23px;
+
+  background:
+    var(--cream);
+
+  color:
+    var(--green);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  transition:
+    transform
+    0.3s ease,
+    background
+    0.3s ease;
+}
+
+.experiencias-final-button:hover {
+  transform:
+    translateY(-2px);
+
+  background:
+    #ffffff;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .experiencias-container,
+  .experiencias-hero-content,
+  .fire-content,
+  .experience-gastronomy-content {
+    width:
+      calc(
+        100% - 80px
+      );
+  }
+
+
+  .experiencias-intro-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 50px;
+  }
+
+
+  .experience-feature,
+  .experience-feature-reverse {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .experience-feature-image {
+    height: 650px;
+
+    min-height: auto;
+  }
+
+
+  .experience-feature-reverse
+  .experience-feature-image,
+  .experience-feature-reverse
+  .experience-feature-content {
+    order: initial;
+  }
+
+
+  .experience-feature-content {
+    padding:
+      90px
+      40px;
+  }
+
+
+  .cafe-bottom {
+    flex-direction: column;
+  }
+
+
+  .cafe-details {
+    justify-content: flex-start;
+  }
+
+
+  .rhythm-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        1fr
+      );
+  }
+
+
+  .rhythm-item:nth-child(2) {
+    border-right: 0;
+  }
+
+
+  .rhythm-item:nth-child(3),
+  .rhythm-item:nth-child(4) {
+    border-top:
+      1px solid
+      rgba(
+        30,
+        41,
+        36,
+        0.11
+      );
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .experiencias-container,
+  .experiencias-hero-content,
+  .fire-content,
+  .experience-gastronomy-content {
+    width:
+      calc(
+        100% - 40px
+      );
+  }
+
+
+  .experiencias-hero {
+    min-height:
+      760px;
+  }
+
+
+  .experiencias-hero-content {
+    margin-top:
+      70px;
+  }
+
+
+  .experiencias-hero-content h1 {
+    font-size:
+      clamp(
+        56px,
+        15vw,
+        82px
+      );
+  }
+
+
+  .experiencias-side-note {
+    display: none;
+  }
+
+
+  .experiencias-intro {
+    padding:
+      100px
+      0;
+  }
+
+
+  .experiencias-intro h2 {
+    font-size:
+      clamp(
+        52px,
+        13vw,
+        74px
+      );
+  }
+
+
+  .experience-feature-image {
+    height: 470px;
+  }
+
+
+  .experience-feature-content {
+    padding:
+      80px
+      20px;
+  }
+
+
+  .experience-feature-content h2 {
+    font-size:
+      clamp(
+        50px,
+        13vw,
+        70px
+      );
+  }
+
+
+  .fire-section {
+    min-height:
+      720px;
+  }
+
+
+  .fire-content h2 {
+    font-size:
+      clamp(
+        56px,
+        15vw,
+        82px
+      );
+  }
+
+
+  .cafe-section {
+    padding:
+      100px
+      0;
+  }
+
+
+  .cafe-heading h2 {
+    font-size:
+      clamp(
+        56px,
+        15vw,
+        82px
+      );
+  }
+
+
+  .cafe-image {
+    height: 470px;
+  }
+
+
+  .experience-gastronomy {
+    min-height:
+      720px;
+  }
+
+
+  .experience-gastronomy-content h2 {
+    font-size:
+      clamp(
+        56px,
+        15vw,
+        82px
+      );
+  }
+
+
+  .rhythm-section {
+    padding:
+      100px
+      0;
+  }
+
+
+  .rhythm-heading h2 {
+    font-size:
+      clamp(
+        56px,
+        15vw,
+        82px
+      );
+  }
+
+
+  .rhythm-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .rhythm-item,
+  .rhythm-item:not(:first-child) {
+    min-height: auto;
+
+    padding:
+      35px
+      0;
+
+    border-right: 0;
+
+    border-bottom:
+      1px solid
+      rgba(
+        30,
+        41,
+        36,
+        0.11
+      );
+  }
+
+
+  .rhythm-item:nth-child(3),
+  .rhythm-item:nth-child(4) {
+    border-top: 0;
+  }
+
+
+  .experiencias-final {
+    min-height:
+      700px;
+  }
+
+
+  .experiencias-final h2 {
+    font-size:
+      clamp(
+        60px,
+        16vw,
+        88px
+      );
+  }
+
+}

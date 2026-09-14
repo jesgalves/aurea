@@ -1,0 +1,1791 @@
+/* =========================================================
+   AURÉA — PÁGINA O HOTEL
+========================================================= */
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+.hotel-page {
+  background: #f4f0e8;
+  color: #161616;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.hotel-page-container {
+  width: min(88%, 1500px);
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER — HOTEL
+========================================================= */
+
+.hotel-header {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  z-index: 100;
+
+  width: 100%;
+  height: 110px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding:
+    0
+    clamp(50px, 7vw, 110px);
+
+  background: transparent;
+}
+
+
+/* =========================================================
+   LOGO — CENTRO REAL DA TELA
+========================================================= */
+
+.hotel-logo {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+.hotel-logo img {
+  display: block;
+
+  width: 145px;
+  height: auto;
+
+  max-width: none;
+
+  object-fit: contain;
+
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(13%)
+    sepia(17%)
+    saturate(640%)
+    hue-rotate(101deg)
+    brightness(88%);
+}
+
+
+/* =========================================================
+   NAVEGAÇÃO
+========================================================= */
+
+.hotel-nav {
+  position: absolute;
+
+  top: 50%;
+
+  transform:
+    translateY(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+}
+
+
+/* =========================================================
+   MENU ESQUERDO
+========================================================= */
+
+.hotel-nav-left {
+  right:
+    calc(
+      50% + 150px
+    );
+
+  gap:
+    clamp(
+      35px,
+      3.5vw,
+      65px
+    );
+
+  justify-content:
+    flex-end;
+}
+
+
+/* =========================================================
+   MENU DIREITO
+========================================================= */
+
+.hotel-nav-right {
+  left:
+    calc(
+      50% + 150px
+    );
+
+  gap:
+    clamp(
+      35px,
+      3.5vw,
+      65px
+    );
+
+  justify-content:
+    flex-start;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+.hotel-nav a {
+  position: relative;
+
+  display: inline-block;
+
+  color: #1e2924;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  opacity: 0.78;
+
+  transition:
+    opacity 0.3s ease,
+    color 0.3s ease;
+}
+
+
+.hotel-nav a:hover,
+.hotel-nav a.active {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   UNDERLINE
+========================================================= */
+
+.hotel-nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -10px;
+
+  width: 100%;
+  height: 1px;
+
+  background: #1e2924;
+
+  transform: scaleX(0);
+
+  transform-origin: right;
+
+  transition:
+    transform
+    0.35s ease;
+}
+
+
+.hotel-nav a:hover::after,
+.hotel-nav a.active::after {
+  transform: scaleX(1);
+
+  transform-origin: left;
+}
+
+
+/* =========================================================
+   ABERTURA EDITORIAL
+========================================================= */
+
+.hotel-opening {
+  padding:
+    190px
+    0
+    140px;
+
+  background: #f4f0e8;
+
+  color: #1e2924;
+}
+
+
+/* =========================================================
+   GRID ABERTURA
+========================================================= */
+
+.hotel-opening-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.35fr)
+    minmax(280px, 0.55fr);
+
+  gap:
+    clamp(
+      70px,
+      10vw,
+      170px
+    );
+
+  align-items: end;
+
+  margin-bottom:
+    clamp(
+      70px,
+      8vw,
+      120px
+    );
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.hotel-section-label {
+  margin-bottom: 28px;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.30em;
+
+  text-transform: uppercase;
+
+  color: #b59a6a;
+}
+
+
+.hotel-section-label.light {
+  color: #d7be90;
+}
+
+
+/* =========================================================
+   TÍTULO ABERTURA
+========================================================= */
+
+.hotel-opening-left h1 {
+  max-width: 950px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      72px,
+      7vw,
+      120px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.04em;
+
+  color: #1e2924;
+}
+
+
+.hotel-opening-left h1 em {
+  display: block;
+
+  margin-top: 10px;
+
+  color: #b59a6a;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-style: italic;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   TEXTO ABERTURA
+========================================================= */
+
+.hotel-opening-right {
+  max-width: 440px;
+}
+
+
+.hotel-opening-right p {
+  margin-bottom: 20px;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 300;
+
+  line-height: 1.95;
+
+  color:
+    rgba(
+      22,
+      22,
+      22,
+      0.63
+    );
+}
+
+
+/* =========================================================
+   IMAGEM ABERTURA
+========================================================= */
+
+.hotel-opening-image {
+  width: 100%;
+
+  height:
+    clamp(
+      520px,
+      62vw,
+      820px
+    );
+
+  overflow: hidden;
+}
+
+
+.hotel-opening-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center center;
+}
+
+
+/* =========================================================
+   INTRO / NOSSA ESSÊNCIA
+========================================================= */
+
+.hotel-intro {
+  padding:
+    clamp(
+      120px,
+      12vw,
+      210px
+    )
+    0;
+
+  background: #f4f0e8;
+}
+
+
+/* =========================================================
+   INTRO HEADING
+========================================================= */
+
+.hotel-intro-top {
+  max-width: 1050px;
+
+  margin-bottom:
+    clamp(
+      70px,
+      8vw,
+      120px
+    );
+}
+
+
+.hotel-intro-top h2 {
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      68px,
+      7vw,
+      112px
+    );
+
+  line-height: 0.90;
+
+  letter-spacing: -0.04em;
+
+  color: #1e2924;
+}
+
+
+.hotel-intro-top h2 em {
+  display: block;
+
+  color: #b59a6a;
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   INTRO GRID
+========================================================= */
+
+.hotel-intro-grid {
+  display: grid;
+
+  grid-template-columns:
+    1.1fr
+    0.6fr;
+
+  gap: 10vw;
+
+  align-items: start;
+}
+
+
+.hotel-intro-statement p {
+  max-width: 650px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      38px,
+      4vw,
+      62px
+    );
+
+  line-height: 1.08;
+
+  color: #1e2924;
+}
+
+
+.hotel-intro-copy {
+  max-width: 480px;
+}
+
+
+.hotel-intro-copy p {
+  margin-bottom: 22px;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 300;
+
+  line-height: 1.95;
+
+  color:
+    rgba(
+      22,
+      22,
+      22,
+      0.64
+    );
+}
+
+
+/* =========================================================
+   ARQUITETURA
+========================================================= */
+
+.hotel-architecture {
+  padding:
+    150px
+    0;
+
+  background: #eae5db;
+}
+
+
+/* =========================================================
+   HEADING ARQUITETURA
+========================================================= */
+
+.hotel-architecture-heading {
+  max-width: 950px;
+
+  margin-bottom: 80px;
+}
+
+
+.hotel-architecture-heading h2 {
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      62px,
+      6vw,
+      100px
+    );
+
+  line-height: 0.92;
+
+  letter-spacing: -0.035em;
+
+  color: #1e2924;
+}
+
+
+.hotel-architecture-heading h2 em {
+  display: block;
+
+  color: #b59a6a;
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   IMAGEM ARQUITETURA
+========================================================= */
+
+.hotel-architecture-image {
+  width: 100%;
+
+  height:
+    clamp(
+      500px,
+      65vw,
+      820px
+    );
+
+  overflow: hidden;
+}
+
+
+.hotel-architecture-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center center;
+}
+
+
+/* =========================================================
+   COPY ARQUITETURA
+========================================================= */
+
+.hotel-architecture-copy {
+  margin-top: 65px;
+
+  display: grid;
+
+  grid-template-columns:
+    0.25fr
+    0.75fr;
+
+  gap: 5vw;
+
+  max-width: 850px;
+
+  margin-left: auto;
+}
+
+
+.architecture-number {
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 55px;
+
+  color: #b59a6a;
+}
+
+
+.hotel-architecture-copy p {
+  margin-bottom: 20px;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+
+  color:
+    rgba(
+      22,
+      22,
+      22,
+      0.64
+    );
+}
+
+
+/* =========================================================
+   LOBBY
+========================================================= */
+
+.hotel-lobby {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #111;
+}
+
+
+/* =========================================================
+   IMAGEM LOBBY
+========================================================= */
+
+.hotel-lobby-image {
+  position: absolute;
+
+  inset: 0;
+}
+
+
+.hotel-lobby-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center center;
+}
+
+
+/* =========================================================
+   OVERLAY LOBBY
+========================================================= */
+
+.hotel-lobby-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+
+    linear-gradient(
+      90deg,
+
+      rgba(
+        7,
+        10,
+        8,
+        0.76
+      ),
+
+      rgba(
+        7,
+        10,
+        8,
+        0.42
+      )
+      45%,
+
+      rgba(
+        7,
+        10,
+        8,
+        0.06
+      )
+      80%
+    );
+}
+
+
+/* =========================================================
+   CONTENT LOBBY
+========================================================= */
+
+.hotel-lobby-content {
+  position: relative;
+
+  z-index: 3;
+
+  width: min(88%, 1500px);
+
+  margin: 0 auto;
+
+  color: #ffffff;
+}
+
+
+.hotel-lobby-content h2 {
+  max-width: 750px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      70px,
+      7vw,
+      115px
+    );
+
+  line-height: 0.86;
+
+  letter-spacing: -0.04em;
+}
+
+
+.hotel-lobby-content h2 em {
+  display: block;
+
+  color: #dfc79a;
+
+  font-style: italic;
+}
+
+
+.hotel-lobby-content > p:last-child {
+  margin-top: 35px;
+
+  max-width: 450px;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+
+  font-weight: 300;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.72
+    );
+}
+
+
+/* =========================================================
+   FILOSOFIA
+========================================================= */
+
+.hotel-philosophy {
+  padding:
+    clamp(
+      130px,
+      12vw,
+      210px
+    )
+    0;
+
+  background: #f4f0e8;
+}
+
+
+/* =========================================================
+   HEADING FILOSOFIA
+========================================================= */
+
+.hotel-philosophy-heading {
+  max-width: 950px;
+
+  margin-bottom: 100px;
+}
+
+
+.hotel-philosophy-heading h2 {
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      62px,
+      6vw,
+      100px
+    );
+
+  line-height: 0.92;
+
+  color: #1e2924;
+}
+
+
+.hotel-philosophy-heading h2 em {
+  display: block;
+
+  color: #b59a6a;
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   VALORES
+========================================================= */
+
+.hotel-values {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      1fr
+    );
+
+  border-top:
+    1px solid
+    rgba(
+      30,
+      41,
+      36,
+      0.15
+    );
+}
+
+
+.hotel-value {
+  padding:
+    40px
+    35px
+    50px
+    0;
+
+  border-right:
+    1px solid
+    rgba(
+      30,
+      41,
+      36,
+      0.12
+    );
+}
+
+
+.hotel-value:not(:first-child) {
+  padding-left: 35px;
+}
+
+
+.hotel-value:last-child {
+  border-right: none;
+}
+
+
+.hotel-value > span {
+  font-size: 9px;
+
+  letter-spacing: 0.22em;
+
+  color: #b59a6a;
+}
+
+
+.hotel-value h3 {
+  margin-top: 35px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 42px;
+
+  color: #1e2924;
+}
+
+
+.hotel-value p {
+  margin-top: 18px;
+
+  font-size: 12px;
+
+  font-weight: 300;
+
+  line-height: 1.9;
+
+  color:
+    rgba(
+      22,
+      22,
+      22,
+      0.58
+    );
+}
+
+
+/* =========================================================
+   IMAGEM EDITORIAL
+========================================================= */
+
+.hotel-editorial-image {
+  position: relative;
+
+  width: 100%;
+
+  height: 85vh;
+
+  min-height: 620px;
+
+  overflow: hidden;
+}
+
+
+.hotel-editorial-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center center;
+}
+
+
+.hotel-editorial-caption {
+  position: absolute;
+
+  right: 50px;
+  bottom: 35px;
+
+  color: #ffffff;
+}
+
+
+.hotel-editorial-caption span {
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.28em;
+}
+
+
+/* =========================================================
+   CTA FINAL
+========================================================= */
+
+.hotel-page-cta {
+  min-height: 85vh;
+
+  padding:
+    120px
+    30px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  background: #111815;
+
+  color: #f4f0e8;
+}
+
+
+.hotel-page-cta-inner {
+  max-width: 950px;
+}
+
+
+.hotel-page-cta h2 {
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      80px,
+      9vw,
+      145px
+    );
+
+  line-height: 0.80;
+
+  letter-spacing: -0.04em;
+}
+
+
+.hotel-page-cta h2 em {
+  display: block;
+
+  color: #b59a6a;
+
+  font-style: italic;
+}
+
+
+.hotel-page-cta-inner > p:not(.hotel-section-label) {
+  margin:
+    40px auto 0;
+
+  max-width: 450px;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.64
+    );
+}
+
+
+/* =========================================================
+   CTA BUTTONS
+========================================================= */
+
+.hotel-page-actions {
+  margin-top: 45px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 35px;
+}
+
+
+.hotel-primary-button {
+  min-width: 190px;
+
+  padding:
+    17px
+    22px;
+
+  display: inline-flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 40px;
+
+  background: #f4f0e8;
+
+  color: #1e2924 !important;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+.hotel-primary-button span {
+  color: #1e2924 !important;
+}
+
+
+.hotel-secondary-button {
+  padding-bottom: 7px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      244,
+      240,
+      232,
+      0.50
+    );
+
+  color: #f4f0e8 !important;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   NOTEBOOK / TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .hotel-header {
+    height: 100px;
+
+    padding:
+      0
+      40px;
+  }
+
+
+  .hotel-logo img {
+    width: 135px;
+  }
+
+
+  .hotel-nav-left {
+    right:
+      calc(
+        50% + 125px
+      );
+
+    gap: 25px;
+  }
+
+
+  .hotel-nav-right {
+    left:
+      calc(
+        50% + 125px
+      );
+
+    gap: 25px;
+  }
+
+
+  .hotel-nav a {
+    font-size: 9px;
+  }
+
+
+  .hotel-opening-grid {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+
+  .hotel-opening-right {
+    max-width: 600px;
+  }
+
+
+  .hotel-intro-grid {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+
+  .hotel-values {
+    grid-template-columns:
+      repeat(
+        2,
+        1fr
+      );
+  }
+
+
+  .hotel-value:nth-child(2) {
+    border-right: none;
+  }
+
+
+  .hotel-value:nth-child(3),
+  .hotel-value:nth-child(4) {
+    border-top:
+      1px solid
+      rgba(
+        30,
+        41,
+        36,
+        0.12
+      );
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .hotel-header {
+    height: 90px;
+
+    justify-content: center;
+  }
+
+
+  .hotel-nav {
+    display: none;
+  }
+
+
+  .hotel-logo {
+    left: 50%;
+    top: 50%;
+
+    transform:
+      translate(-50%, -50%);
+  }
+
+
+  .hotel-logo img {
+    width: 125px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .hotel-page-container {
+    width:
+      calc(
+        100% - 40px
+      );
+  }
+
+
+  .hotel-opening {
+    padding:
+      125px
+      0
+      90px;
+  }
+
+
+  .hotel-opening-left h1 {
+    font-size:
+      clamp(
+        55px,
+        14vw,
+        78px
+      );
+  }
+
+
+  .hotel-opening-image {
+    height: 430px;
+  }
+
+
+  .hotel-intro {
+    padding:
+      110px
+      0;
+  }
+
+
+  .hotel-intro-top h2,
+  .hotel-architecture-heading h2,
+  .hotel-philosophy-heading h2 {
+    font-size:
+      clamp(
+        52px,
+        13vw,
+        72px
+      );
+  }
+
+
+  .hotel-architecture {
+    padding:
+      110px
+      0;
+  }
+
+
+  .hotel-architecture-image {
+    height: 420px;
+  }
+
+
+  .hotel-architecture-copy {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    margin-left: 0;
+  }
+
+
+  .hotel-lobby {
+    min-height: 780px;
+  }
+
+
+  .hotel-lobby-content h2 {
+    font-size:
+      clamp(
+        55px,
+        13vw,
+        75px
+      );
+  }
+
+
+  .hotel-values {
+    grid-template-columns: 1fr;
+  }
+
+
+  .hotel-value,
+  .hotel-value:not(:first-child) {
+    padding:
+      35px
+      0;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid
+      rgba(
+        30,
+        41,
+        36,
+        0.12
+      );
+  }
+
+
+  .hotel-editorial-image {
+    height: 600px;
+  }
+
+
+  .hotel-editorial-caption {
+    right: 22px;
+    bottom: 22px;
+  }
+
+
+  .hotel-page-actions {
+    flex-direction: column;
+
+    gap: 25px;
+  }
+
+
+  .hotel-page-cta h2 {
+    font-size:
+      clamp(
+        60px,
+        15vw,
+        90px
+      );
+  }
+
+}
+
+/* =========================================================
+   RECORTES VISUAIS — PÁGINA O HOTEL
+========================================================= */
+
+
+/* =========================================================
+   1. ABERTURA EDITORIAL
+========================================================= */
+
+.hotel-opening-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.hotel-opening-image img {
+  width: 118%;
+  height: 118%;
+
+  max-width: none;
+
+  object-fit: cover;
+  object-position: center 43%;
+
+  transform: translate(-7%, -8%);
+}
+
+
+/* =========================================================
+   2. ARQUITETURA
+========================================================= */
+
+.hotel-architecture-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.hotel-architecture-image img {
+  width: 120%;
+  height: 120%;
+
+  max-width: none;
+
+  object-fit: cover;
+  object-position: center 42%;
+
+  transform: translate(-8%, -9%);
+}
+
+
+/* =========================================================
+   3. LOBBY
+========================================================= */
+
+.hotel-lobby-image {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+}
+
+.hotel-lobby-image img {
+  width: 120%;
+  height: 120%;
+
+  max-width: none;
+
+  object-fit: cover;
+  object-position: center 42%;
+
+  transform: translate(-8%, -9%);
+}
+
+
+/* =========================================================
+   4. IMAGEM EDITORIAL FINAL
+========================================================= */
+
+.hotel-editorial-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.hotel-editorial-image img {
+  width: 122%;
+  height: 122%;
+
+  max-width: none;
+
+  object-fit: cover;
+  object-position: center 42%;
+
+  transform: translate(-9%, -10%);
+}
+
+
+/* =========================================================
+   NOTEBOOK / TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .hotel-opening-image img {
+    width: 120%;
+    height: 120%;
+
+    transform: translate(-8%, -9%);
+  }
+
+
+  .hotel-architecture-image img {
+    width: 122%;
+    height: 122%;
+
+    transform: translate(-9%, -10%);
+  }
+
+
+  .hotel-lobby-image img {
+    width: 122%;
+    height: 122%;
+
+    transform: translate(-9%, -10%);
+  }
+
+
+  .hotel-editorial-image img {
+    width: 124%;
+    height: 124%;
+
+    transform: translate(-10%, -11%);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .hotel-opening-image img {
+    width: 124%;
+    height: 124%;
+
+    transform: translate(-10%, -11%);
+  }
+
+
+  .hotel-architecture-image img {
+    width: 126%;
+    height: 126%;
+
+    transform: translate(-11%, -12%);
+  }
+
+
+  .hotel-lobby-image img {
+    width: 126%;
+    height: 126%;
+
+    transform: translate(-11%, -12%);
+  }
+
+
+  .hotel-editorial-image img {
+    width: 128%;
+    height: 128%;
+
+    transform: translate(-12%, -13%);
+  }
+
+}
+
+/* =========================================================
+   CORREÇÕES FINAIS — PÁGINA O HOTEL
+========================================================= */
+
+
+/* =========================================================
+   REMOVE O "FRAME" EXTERNO
+========================================================= */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  max-width: 100%;
+
+  overflow-x: hidden;
+}
+
+
+body {
+  background: #f4f0e8;
+}
+
+
+/* garante que nenhuma seção herde margem externa */
+
+main,
+section {
+  margin-left: 0;
+  margin-right: 0;
+
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   TIPOGRAFIA
+   CORMORANT GARAMOND SEM NEGRITO
+========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-weight: 400;
+}
+
+
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong {
+  font-weight: 400;
+}
+
+
+h1 em,
+h2 em,
+h3 em,
+h4 em {
+  font-family: "Cormorant Garamond", serif;
+
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+/* =========================================================
+   TÍTULOS PRINCIPAIS DA PÁGINA
+========================================================= */
+
+.hotel-page h1,
+.hotel-page h2,
+.hotel-page h3,
+
+.hotel-intro h1,
+.hotel-intro h2,
+
+.hotel-story h2,
+.hotel-architecture h2,
+.hotel-philosophy h2,
+
+.hotel-arrival h2,
+
+.hotel-content h2 {
+  font-weight: 400 !important;
+}
+
+
+/* partes em dourado / itálico */
+
+.hotel-page h1 em,
+.hotel-page h2 em,
+.hotel-page h3 em,
+
+.hotel-intro h1 em,
+.hotel-intro h2 em,
+
+.hotel-story h2 em,
+.hotel-architecture h2 em,
+.hotel-philosophy h2 em,
+
+.hotel-arrival h2 em,
+.hotel-content h2 em {
+  font-weight: 400 !important;
+  font-style: italic;
+}
+
+
+/* =========================================================
+   TEXTOS NORMAIS
+========================================================= */
+
+p,
+li,
+a {
+  font-family: "Manrope", sans-serif;
+}
+
+
+p {
+  font-weight: 300;
+}
+
+
+/* =========================================================
+   IMAGENS FULL WIDTH
+   REMOVE ESPAÇOS LATERAIS INDESEJADOS
+========================================================= */
+
+.hotel-full-image,
+.hotel-arrival,
+.hotel-arrival-image,
+.hotel-wide-image {
+  margin-left: 0;
+  margin-right: 0;
+
+  width: 100%;
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   IMAGENS
+========================================================= */
+
+.hotel-full-image img,
+.hotel-arrival img,
+.hotel-arrival-image img,
+.hotel-wide-image img {
+  display: block;
+
+  width: 100%;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   EVITA BOLD ACIDENTAL NOS CARDS
+========================================================= */
+
+.hotel-values h3,
+.hotel-value h3,
+.values-grid h3,
+.value-card h3 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-weight: 400 !important;
+}

@@ -1,0 +1,500 @@
+/* =========================================================
+   AURÉA — FOOTER GLOBAL
+========================================================= */
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+.site-footer {
+  background: #111815;
+  color: #f4f0e8;
+
+  padding:
+    90px
+    0
+    35px;
+}
+
+
+.site-footer-inner {
+  width:
+    min(
+      calc(100% - 140px),
+      1440px
+    );
+
+  margin:
+    0 auto;
+}
+
+
+/* =========================================================
+   TOPO
+========================================================= */
+
+.site-footer-top {
+  display: grid;
+
+  grid-template-columns:
+    1.1fr
+    0.9fr;
+
+  gap:
+    clamp(
+      70px,
+      10vw,
+      170px
+    );
+
+  align-items: start;
+
+  padding-bottom: 75px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      244,
+      240,
+      232,
+      0.14
+    );
+}
+
+
+/* =========================================================
+   MARCA
+========================================================= */
+
+.site-footer-brand {
+  max-width: 560px;
+}
+
+
+.site-footer-logo {
+  display: inline-block;
+
+  width: 145px;
+
+  margin-bottom: 35px;
+}
+
+
+.site-footer-logo img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  filter:
+    brightness(0)
+    invert(1);
+}
+
+
+.site-footer-brand h2 {
+  margin: 0;
+
+  max-width: 540px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      48px,
+      4vw,
+      72px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.03em;
+}
+
+
+.site-footer-brand h2 em {
+  display: block;
+
+  color: #b89a67;
+
+  font-style: italic;
+}
+
+
+.site-footer-brand p {
+  max-width: 430px;
+
+  margin-top: 25px;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 300;
+
+  line-height: 1.85;
+
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.64
+    );
+}
+
+
+/* =========================================================
+   NAVEGAÇÃO
+========================================================= */
+
+.site-footer-columns {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 60px;
+}
+
+
+.site-footer-column h3 {
+  margin:
+    0
+    0
+    25px;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.22em;
+
+  text-transform: uppercase;
+
+  color: #b89a67;
+}
+
+
+.site-footer-column nav {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 13px;
+}
+
+
+.site-footer-column a {
+  position: relative;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 300;
+
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.76
+    );
+
+  text-decoration: none;
+
+  transition:
+    color
+    0.3s ease;
+}
+
+
+.site-footer-column a:hover {
+  color:
+    #ffffff;
+}
+
+
+/* =========================================================
+   CONTATO
+========================================================= */
+
+.site-footer-contact {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+
+.site-footer-contact span {
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 300;
+
+  line-height: 1.6;
+
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.70
+    );
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.site-footer-reserve {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  margin-top: 30px;
+
+  min-width: 220px;
+
+  padding:
+    16px
+    20px;
+
+  border:
+    1px solid
+    rgba(
+      244,
+      240,
+      232,
+      0.38
+    );
+
+  font-size: 8px !important;
+
+  font-weight: 600 !important;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  color:
+    #f4f0e8 !important;
+
+  transition:
+    background
+    0.3s ease,
+    color
+    0.3s ease;
+}
+
+
+.site-footer-reserve:hover {
+  background:
+    #f4f0e8;
+
+  color:
+    #111815 !important;
+}
+
+
+/* =========================================================
+   RODAPÉ INFERIOR
+========================================================= */
+
+.site-footer-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding-top: 30px;
+}
+
+
+.site-footer-bottom p {
+  margin: 0;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 300;
+
+  letter-spacing: 0.10em;
+
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.42
+    );
+}
+
+
+.site-footer-bottom-links {
+  display: flex;
+
+  gap: 28px;
+}
+
+
+.site-footer-bottom-links a {
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 8px;
+
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.46
+    );
+
+  text-decoration: none;
+}
+
+
+.site-footer-bottom-links a:hover {
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.90
+    );
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .site-footer-inner {
+    width:
+      calc(
+        100% - 80px
+      );
+  }
+
+
+  .site-footer-top {
+    grid-template-columns:
+      1fr;
+
+    gap: 70px;
+  }
+
+
+  .site-footer-columns {
+    max-width: 700px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .site-footer {
+    padding:
+      75px
+      0
+      30px;
+  }
+
+
+  .site-footer-inner {
+    width:
+      calc(
+        100% - 40px
+      );
+  }
+
+
+  .site-footer-top {
+    padding-bottom: 55px;
+  }
+
+
+  .site-footer-logo {
+    width: 125px;
+  }
+
+
+  .site-footer-brand h2 {
+    font-size:
+      clamp(
+        48px,
+        13vw,
+        66px
+      );
+  }
+
+
+  .site-footer-columns {
+    grid-template-columns:
+      1fr;
+
+    gap: 45px;
+  }
+
+
+  .site-footer-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+  }
+
+
+  .site-footer-bottom-links {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+}

@@ -1,0 +1,689 @@
+/* =========================================================
+   AURÉA — HEADER GLOBAL
+========================================================= */
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 1000;
+
+  width: min(92%, 1320px);
+  height: 120px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    170px
+    minmax(0, 1fr);
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.site-logo {
+  grid-column: 2;
+
+  justify-self: center;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 145px;
+
+  position: relative;
+  z-index: 1002;
+}
+
+
+.site-logo img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   NAVEGAÇÃO DESKTOP
+========================================================= */
+
+.site-nav {
+  display: flex;
+
+  align-items: center;
+
+  gap:
+    clamp(
+      22px,
+      2.4vw,
+      46px
+    );
+}
+
+
+/* MENU ESQUERDO */
+
+.site-nav-left {
+  grid-column: 1;
+
+  justify-self: start;
+}
+
+
+/* MENU DIREITO */
+
+.site-nav-right {
+  grid-column: 3;
+
+  justify-self: end;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+.site-nav a {
+  position: relative;
+
+  padding:
+    8px
+    0;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.05em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   HEADER CLARO
+   usado sobre imagem/fundo escuro
+========================================================= */
+
+.header-light .site-logo img {
+  filter:
+    brightness(0)
+    invert(1);
+}
+
+
+.header-light .site-nav a {
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.88
+    );
+}
+
+
+.header-light .site-nav a:hover,
+.header-light .site-nav a.active {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   HEADER ESCURO
+   usado sobre fundo claro
+========================================================= */
+
+.header-dark .site-logo img {
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(14%)
+    sepia(18%)
+    saturate(700%)
+    hue-rotate(102deg)
+    brightness(82%);
+}
+
+
+.header-dark .site-nav a {
+  color:
+    rgba(
+      23,
+      37,
+      31,
+      0.80
+    );
+}
+
+
+.header-dark .site-nav a:hover,
+.header-dark .site-nav a.active {
+  color: #17251f;
+}
+
+
+/* =========================================================
+   LINHA DO MENU
+========================================================= */
+
+.site-nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 1px;
+
+  background:
+    currentColor;
+
+  transition:
+    width
+    0.3s ease;
+}
+
+
+.site-nav a:hover::after,
+.site-nav a.active::after {
+  width: 100%;
+}
+
+
+/* =========================================================
+   BOTÃO MOBILE
+   invisível no desktop
+========================================================= */
+
+.mobile-menu-toggle {
+  display: none;
+
+  position: relative;
+  z-index: 1003;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+
+/* LINHAS DO ÍCONE */
+
+.mobile-menu-toggle span {
+  position: absolute;
+
+  left: 8px;
+
+  width: 26px;
+  height: 1px;
+
+  background: currentColor;
+
+  transition:
+    transform 0.45s cubic-bezier(0.76, 0, 0.24, 1),
+    top 0.45s cubic-bezier(0.76, 0, 0.24, 1),
+    opacity 0.3s ease;
+}
+
+
+.mobile-menu-toggle span:nth-child(1) {
+  top: 16px;
+}
+
+
+.mobile-menu-toggle span:nth-child(2) {
+  top: 25px;
+}
+
+
+/* CORES DO HAMBÚRGUER */
+
+.header-light .mobile-menu-toggle {
+  color: #ffffff;
+}
+
+
+.header-dark .mobile-menu-toggle {
+  color: #17251f;
+}
+
+
+/* =========================================================
+   MENU MOBILE FULLSCREEN
+   invisível no desktop
+========================================================= */
+
+.mobile-menu {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1001;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding:
+    130px
+    clamp(28px, 8vw, 70px)
+    50px;
+
+  background: #17251f;
+
+  opacity: 0;
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transform: translateY(-12px);
+
+  transition:
+    opacity 0.45s ease,
+    visibility 0.45s ease,
+    transform 0.55s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+
+/* MENU ABERTO */
+
+.site-header.menu-open .mobile-menu {
+  opacity: 1;
+  visibility: visible;
+
+  pointer-events: auto;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   LINKS DO MENU MOBILE
+========================================================= */
+
+.mobile-menu-nav {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 4px;
+}
+
+
+.mobile-menu-nav a {
+  display: inline-block;
+
+  color: #f4f0e8;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      38px,
+      10vw,
+      64px
+    );
+
+  font-weight: 400;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.025em;
+
+  text-decoration: none;
+
+  opacity: 0;
+
+  transform: translateY(24px);
+
+  transition:
+    color 0.3s ease,
+    opacity 0.55s ease,
+    transform 0.55s ease;
+}
+
+
+.mobile-menu-nav a:hover,
+.mobile-menu-nav a.active {
+  color: #c7b48a;
+}
+
+
+/* ANIMAÇÃO DOS LINKS */
+
+.site-header.menu-open .mobile-menu-nav a {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+.site-header.menu-open .mobile-menu-nav a:nth-child(1) {
+  transition-delay: 0.10s;
+}
+
+
+.site-header.menu-open .mobile-menu-nav a:nth-child(2) {
+  transition-delay: 0.15s;
+}
+
+
+.site-header.menu-open .mobile-menu-nav a:nth-child(3) {
+  transition-delay: 0.20s;
+}
+
+
+.site-header.menu-open .mobile-menu-nav a:nth-child(4) {
+  transition-delay: 0.25s;
+}
+
+
+.site-header.menu-open .mobile-menu-nav a:nth-child(5) {
+  transition-delay: 0.30s;
+}
+
+
+.site-header.menu-open .mobile-menu-nav a:nth-child(6) {
+  transition-delay: 0.35s;
+}
+
+
+/* =========================================================
+   RODAPÉ DO MENU MOBILE
+========================================================= */
+
+.mobile-menu-footer {
+  margin-top: 50px;
+
+  padding-top: 28px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.16);
+
+  opacity: 0;
+
+  transform: translateY(18px);
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+
+.site-header.menu-open .mobile-menu-footer {
+  opacity: 1;
+
+  transform: translateY(0);
+
+  transition-delay: 0.4s;
+}
+
+
+/* BOTÃO RESERVAR */
+
+.mobile-menu-reserve {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding:
+    18px
+    0;
+
+  color: #f4f0e8;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+}
+
+
+.mobile-menu-reserve span:last-child {
+  font-size: 18px;
+
+  transition:
+    transform
+    0.3s ease;
+}
+
+
+.mobile-menu-reserve:hover span:last-child {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   ESTADO ABERTO — HAMBÚRGUER VIRA X
+========================================================= */
+
+.site-header.menu-open .mobile-menu-toggle {
+  color: #f4f0e8;
+}
+
+
+.site-header.menu-open .mobile-menu-toggle span:nth-child(1) {
+  top: 21px;
+
+  transform: rotate(45deg);
+}
+
+
+.site-header.menu-open .mobile-menu-toggle span:nth-child(2) {
+  top: 21px;
+
+  transform: rotate(-45deg);
+}
+
+
+/* LOGO BRANCA QUANDO MENU ESTIVER ABERTO */
+
+.site-header.menu-open .site-logo img {
+  filter:
+    brightness(0)
+    invert(1);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+
+  .site-header {
+    width: 94%;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      135px
+      minmax(0, 1fr);
+  }
+
+
+  .site-logo {
+    width: 120px;
+  }
+
+
+  .site-nav {
+    gap: 18px;
+  }
+
+
+  .site-nav a {
+    font-size: 8px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .site-header {
+    width:
+      calc(
+        100% - 40px
+      );
+
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  /* ESCONDE MENU DESKTOP */
+
+  .site-nav {
+    display: none;
+  }
+
+
+  /* LOGO */
+
+  .site-logo {
+    width: 115px;
+
+    margin: 0;
+
+    justify-self: auto;
+  }
+
+
+  /* MOSTRA BOTÃO */
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+
+  /* MENU FULLSCREEN */
+
+  .mobile-menu {
+    display: flex;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE PEQUENO
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .site-header {
+    width:
+      calc(
+        100% - 32px
+      );
+
+    height: 82px;
+  }
+
+
+  .site-logo {
+    width: 105px;
+  }
+
+
+  .mobile-menu {
+    padding:
+      115px
+      24px
+      38px;
+  }
+
+
+  .mobile-menu-nav a {
+    font-size:
+      clamp(
+        35px,
+        11vw,
+        50px
+      );
+  }
+
+
+  .mobile-menu-footer {
+    margin-top: 38px;
+  }
+
+}
+
+
+/* =========================================================
+   EVITA SCROLL QUANDO MENU ESTÁ ABERTO
+========================================================= */
+
+body.menu-open {
+  overflow: hidden;
+}

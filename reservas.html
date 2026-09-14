@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Reservas | AURÉA Boutique Hotel</title>
+
+  <meta
+    name="description"
+    content="Solicite sua reserva no AURÉA Boutique Hotel na Serra Catarinense."
+  >
+
+
+  <!-- =====================================================
+       FONTES
+  ====================================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =====================================================
+       CSS
+  ====================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="reservas.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="header.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="footer.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="animations.css"
+  >
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script
+    defer
+    src="script.js"
+  ></script>
+
+  <script
+    defer
+    src="animations.js"
+  ></script>
+
+  <script
+    defer
+    src="reservas.js"
+  ></script>
+
+</head>
+
+
+<body class="booking-page">
+
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <header class="site-header header-dark">
+
+
+    <!-- MENU ESQUERDO -->
+
+    <nav class="site-nav site-nav-left">
+
+      <a href="hotel.html">
+        O Hotel
+      </a>
+
+      <a href="suites.html">
+        Suítes
+      </a>
+
+      <a href="villa.html">
+        Villa Auréa
+      </a>
+
+    </nav>
+
+
+    <!-- LOGO -->
+
+    <a
+      href="index.html"
+      class="site-logo"
+      aria-label="AURÉA Boutique Hotel"
+    >
+
+      <img
+        src="assets/logo-aurea.png"
+        alt="AURÉA Boutique Hotel"
+      >
+
+    </a>
+
+
+    <!-- MENU DIREITO -->
+
+    <nav class="site-nav site-nav-right">
+
+      <a href="experiencias.html">
+        Experiências
+      </a>
+
+      <a href="gastronomia.html">
+        Gastronomia
+      </a>
+
+      <a href="localizacao.html">
+        Localização
+      </a>
+
+    </nav>
+
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- =====================================================
+         ABERTURA
+    ====================================================== -->
+
+    <section class="booking-opening">
+
+
+      <div class="booking-container">
+
+
+        <div class="booking-opening-grid">
+
+
+          <!-- ESQUERDA -->
+
+          <div class="booking-opening-left reveal">
+
+
+            <span class="booking-label">
+              RESERVAS
+            </span>
+
+
+            <h1>
+
+              Sua estadia começa
+
+              <em>
+                aqui.
+              </em>
+
+            </h1>
+
+
+          </div>
+
+
+          <!-- DIREITA -->
+
+          <div
+            class="booking-opening-right reveal reveal-delay-1"
+          >
+
+
+            <p>
+              Preencha os dados abaixo para solicitar
+              sua hospedagem na AURÉA.
+            </p>
+
+
+            <p>
+              Após o envio, nossa equipe entrará em contato
+              para confirmar disponibilidade, valores e
+              os detalhes da sua estadia.
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FORMULÁRIO
+    ====================================================== -->
+
+    <section class="booking-form-section">
+
+
+      <div class="booking-container">
+
+
+        <div class="booking-form-layout">
+
+
+          <!-- =================================================
+               COLUNA ESQUERDA
+          ================================================== -->
+
+          <aside class="booking-sidebar reveal-left">
+
+
+            <span class="booking-sidebar-number">
+              01
+            </span>
+
+
+            <h2>
+
+              Conte-nos como
+              deseja viver
+
+              <em>
+                a serra.
+              </em>
+
+            </h2>
+
+
+            <p>
+              Escolha sua acomodação, período e
+              detalhes da viagem. Nossa equipe cuidará
+              do restante.
+            </p>
+
+
+            <div class="booking-sidebar-info">
+
+
+              <div class="reveal">
+
+                <span>
+                  CHECK-IN
+                </span>
+
+                <p>
+                  A partir das 15h
+                </p>
+
+              </div>
+
+
+              <div class="reveal reveal-delay-1">
+
+                <span>
+                  CHECK-OUT
+                </span>
+
+                <p>
+                  Até às 11h
+                </p>
+
+              </div>
+
+
+              <div class="reveal reveal-delay-2">
+
+                <span>
+                  ATENDIMENTO
+                </span>
+
+                <p>
+                  Confirmação personalizada
+                </p>
+
+              </div>
+
+
+            </div>
+
+
+          </aside>
+
+
+
+          <!-- =================================================
+               FORM
+          ================================================== -->
+
+          <form
+            class="booking-form reveal-right reveal-delay-1"
+            id="booking-form"
+            action="#"
+            method="post"
+          >
+
+
+            <!-- =================================================
+                 01 — SEUS DADOS
+            ================================================== -->
+
+            <div class="form-group-title">
+
+              <span>
+                01
+              </span>
+
+              <h3>
+                Seus dados
+              </h3>
+
+            </div>
+
+
+            <div class="form-grid">
+
+
+              <!-- NOME -->
+
+              <div class="form-field full">
+
+                <label for="nome">
+                  Nome completo
+                </label>
+
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  placeholder="Seu nome completo"
+                  autocomplete="name"
+                  required
+                >
+
+              </div>
+
+
+              <!-- EMAIL -->
+
+              <div class="form-field">
+
+                <label for="email">
+                  E-mail
+                </label>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="voce@email.com"
+                  autocomplete="email"
+                  required
+                >
+
+              </div>
+
+
+              <!-- TELEFONE -->
+
+              <div class="form-field">
+
+                <label for="telefone">
+                  Telefone / WhatsApp
+                </label>
+
+                <input
+                  type="tel"
+                  id="telefone"
+                  name="telefone"
+                  placeholder="(00) 00000-0000"
+                  autocomplete="tel"
+                  required
+                >
+
+              </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 02 — ACOMODAÇÃO
+            ================================================== -->
+
+            <div class="form-group-title">
+
+              <span>
+                02
+              </span>
+
+              <h3>
+                Acomodação
+              </h3>
+
+            </div>
+
+
+            <div class="form-grid">
+
+
+              <!-- SUÍTE -->
+
+              <div class="form-field full">
+
+                <label for="suite">
+                  Acomodação desejada
+                </label>
+
+                <select
+                  id="suite"
+                  name="suite"
+                  required
+                >
+
+                  <option
+                    value=""
+                    selected
+                    disabled
+                  >
+                    Selecione uma acomodação
+                  </option>
+
+                  <option value="horizonte">
+                    Suíte Horizonte
+                  </option>
+
+                  <option value="bosque">
+                    Suíte Bosque
+                  </option>
+
+                  <option value="pedra">
+                    Suíte Pedra
+                  </option>
+
+                  <option value="bruma">
+                    Suíte Bruma
+                  </option>
+
+                  <option value="araucaria">
+                    Loft Araucária
+                  </option>
+
+                  <option value="villa">
+                    Villa Auréa
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <!-- ADULTOS -->
+
+              <div class="form-field">
+
+                <label for="adultos">
+                  Adultos
+                </label>
+
+                <select
+                  id="adultos"
+                  name="adultos"
+                  required
+                >
+
+                  <option value="1">
+                    1 adulto
+                  </option>
+
+                  <option
+                    value="2"
+                    selected
+                  >
+                    2 adultos
+                  </option>
+
+                  <option value="3">
+                    3 adultos
+                  </option>
+
+                  <option value="4">
+                    4 adultos
+                  </option>
+
+                  <option value="5">
+                    5 adultos
+                  </option>
+
+                  <option value="6">
+                    6 adultos
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <!-- CRIANÇAS -->
+
+              <div class="form-field">
+
+                <label for="criancas">
+                  Crianças
+                </label>
+
+                <select
+                  id="criancas"
+                  name="criancas"
+                >
+
+                  <option
+                    value="0"
+                    selected
+                  >
+                    Nenhuma
+                  </option>
+
+                  <option value="1">
+                    1 criança
+                  </option>
+
+                  <option value="2">
+                    2 crianças
+                  </option>
+
+                  <option value="3">
+                    3 crianças
+                  </option>
+
+                  <option value="4">
+                    4 crianças
+                  </option>
+
+                </select>
+
+              </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 03 — PERÍODO
+            ================================================== -->
+
+            <div class="form-group-title">
+
+              <span>
+                03
+              </span>
+
+              <h3>
+                Período
+              </h3>
+
+            </div>
+
+
+            <div class="form-grid">
+
+
+              <!-- CHECK-IN DATE -->
+
+              <div class="form-field">
+
+                <label for="checkin">
+                  Data de check-in
+                </label>
+
+                <input
+                  type="date"
+                  id="checkin"
+                  name="checkin"
+                  required
+                >
+
+              </div>
+
+
+              <!-- CHECK-OUT DATE -->
+
+              <div class="form-field">
+
+                <label for="checkout">
+                  Data de check-out
+                </label>
+
+                <input
+                  type="date"
+                  id="checkout"
+                  name="checkout"
+                  required
+                >
+
+              </div>
+
+
+              <!-- CHECK-IN TIME -->
+
+              <div class="form-field">
+
+                <label for="checkin-time">
+                  Horário previsto de check-in
+                </label>
+
+                <input
+                  type="time"
+                  id="checkin-time"
+                  name="checkin_time"
+                  value="15:00"
+                >
+
+              </div>
+
+
+              <!-- CHECK-OUT TIME -->
+
+              <div class="form-field">
+
+                <label for="checkout-time">
+                  Horário previsto de check-out
+                </label>
+
+                <input
+                  type="time"
+                  id="checkout-time"
+                  name="checkout_time"
+                  value="11:00"
+                >
+
+              </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 04 — DETALHES ADICIONAIS
+            ================================================== -->
+
+            <div class="form-group-title">
+
+              <span>
+                04
+              </span>
+
+              <h3>
+                Detalhes adicionais
+              </h3>
+
+            </div>
+
+
+            <div class="form-grid">
+
+
+              <!-- OCASIÃO -->
+
+              <div class="form-field full">
+
+                <label for="ocasiao">
+                  Ocasião
+                </label>
+
+                <select
+                  id="ocasiao"
+                  name="ocasiao"
+                >
+
+                  <option value="">
+                    Se desejar, selecione uma opção
+                  </option>
+
+                  <option value="descanso">
+                    Descanso / lazer
+                  </option>
+
+                  <option value="casal">
+                    Viagem a dois
+                  </option>
+
+                  <option value="aniversario">
+                    Aniversário
+                  </option>
+
+                  <option value="lua-de-mel">
+                    Lua de mel
+                  </option>
+
+                  <option value="celebracao">
+                    Celebração especial
+                  </option>
+
+                  <option value="outro">
+                    Outro
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <!-- OBSERVAÇÕES -->
+
+              <div class="form-field full">
+
+                <label for="observacoes">
+                  Observações
+                </label>
+
+                <textarea
+                  id="observacoes"
+                  name="observacoes"
+                  rows="6"
+                  placeholder="Conte-nos se há alguma preferência, ocasião especial, restrição alimentar ou necessidade específica."
+                ></textarea>
+
+              </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 O reservas.js adiciona automaticamente
+                 o resumo da estadia nesta região.
+            ================================================== -->
+
+
+
+            <!-- =================================================
+                 CONSENTIMENTO
+            ================================================== -->
+
+            <label class="booking-checkbox">
+
+              <input
+                type="checkbox"
+                id="consentimento"
+                name="consentimento"
+                required
+              >
+
+              <span>
+                Concordo em fornecer meus dados para
+                contato referente à solicitação de reserva.
+              </span>
+
+            </label>
+
+
+
+            <!-- =================================================
+                 SUBMIT
+            ================================================== -->
+
+            <button
+              type="submit"
+              class="booking-submit motion-button"
+            >
+
+              <span>
+                Enviar solicitação
+              </span>
+
+              <span class="booking-submit-arrow">
+                →
+              </span>
+
+            </button>
+
+
+            <p class="booking-form-note">
+
+              O envio deste formulário não confirma automaticamente
+              a reserva. A confirmação será realizada após o contato
+              da equipe AURÉA.
+
+            </p>
+
+
+          </form>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CTA FINAL
+    ====================================================== -->
+
+    <section class="booking-footer">
+
+
+      <div class="booking-footer-inner reveal">
+
+
+        <span class="booking-label light">
+          AURÉA · SERRA CATARINENSE
+        </span>
+
+
+        <h2>
+
+          Há lugares que
+          começam antes mesmo
+
+          <em>
+            da chegada.
+          </em>
+
+        </h2>
+
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =====================================================
+       FOOTER GLOBAL
+  ====================================================== -->
+
+  <footer class="site-footer">
+
+
+    <div class="site-footer-inner">
+
+
+      <div class="site-footer-top">
+
+
+        <!-- MARCA -->
+
+        <div class="site-footer-brand reveal">
+
+
+          <a
+            href="index.html"
+            class="site-footer-logo"
+            aria-label="AURÉA Boutique Hotel"
+          >
+
+            <img
+              src="assets/logo-aurea.png"
+              alt="AURÉA Boutique Hotel"
+            >
+
+          </a>
+
+
+          <h2>
+
+            Um lugar para
+
+            <em>
+              permanecer.
+            </em>
+
+          </h2>
+
+
+          <p>
+
+            Entre montanhas, araucárias e silêncio,
+            a AURÉA transforma a Serra Catarinense
+            em uma experiência de presença.
+
+          </p>
+
+
+        </div>
+
+
+
+        <!-- COLUNAS -->
+
+        <div class="site-footer-columns reveal reveal-delay-1">
+
+
+          <!-- NAVEGAÇÃO -->
+
+          <div class="site-footer-column">
+
+
+            <h3>
+              Descubra
+            </h3>
+
+
+            <nav>
+
+              <a href="hotel.html">
+                O Hotel
+              </a>
+
+              <a href="suites.html">
+                Suítes
+              </a>
+
+              <a href="villa.html">
+                Villa Auréa
+              </a>
+
+              <a href="experiencias.html">
+                Experiências
+              </a>
+
+              <a href="gastronomia.html">
+                Gastronomia
+              </a>
+
+              <a href="localizacao.html">
+                Localização
+              </a>
+
+            </nav>
+
+
+          </div>
+
+
+
+          <!-- CONTATO -->
+
+          <div class="site-footer-column">
+
+
+            <h3>
+              AURÉA
+            </h3>
+
+
+            <div class="site-footer-contact">
+
+              <span>
+                Serra Catarinense
+              </span>
+
+              <span>
+                Santa Catarina · Brasil
+              </span>
+
+              <span>
+                reservas@aureahotel.com.br
+              </span>
+
+              <span>
+                +55 49 0000 0000
+              </span>
+
+            </div>
+
+
+            <a
+              href="reservas.html"
+              class="site-footer-reserve motion-button"
+            >
+
+              <span>
+                Reservar
+              </span>
+
+              <span>
+                →
+              </span>
+
+            </a>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- =================================================
+           PARTE INFERIOR
+      ================================================== -->
+
+      <div class="site-footer-bottom">
+
+
+        <p>
+          © 2026 AURÉA BOUTIQUE HOTEL · TODOS OS DIREITOS RESERVADOS
+        </p>
+
+
+        <div class="site-footer-bottom-links">
+
+          <a href="#">
+            Privacidade
+          </a>
+
+          <a href="#">
+            Termos
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+  </footer>
+
+
+</body>
+
+</html>

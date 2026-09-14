@@ -1,0 +1,1437 @@
+/* =========================================================
+   AURÉA — VILLA
+========================================================= */
+
+
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
+
+:root {
+  --villa-cream: #f4f0e8;
+  --villa-soft: #e9e3d8;
+
+  --villa-green: #1e2924;
+  --villa-green-dark: #111815;
+
+  --villa-gold: #b59a6a;
+
+  --villa-text:
+    rgba(
+      30,
+      41,
+      36,
+      0.62
+    );
+}
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background:
+    var(--villa-cream);
+
+  color:
+    var(--villa-green);
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.villa-container {
+  width:
+    min(
+      calc(100% - 140px),
+      1440px
+    );
+
+  margin:
+    0 auto;
+}
+
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+.villa-section-label,
+.villa-eyebrow {
+  display: block;
+
+  margin-bottom: 24px;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.28em;
+
+  text-transform: uppercase;
+
+  color:
+    var(--villa-gold);
+}
+
+.villa-section-label.light {
+  color: #d8c295;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.villa-hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    var(--villa-green-dark);
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.villa-hero-image {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+}
+
+.villa-hero-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center center;
+
+  transform:
+    scale(1.10);
+
+  transform-origin:
+    center center;
+}
+
+
+/* =========================================================
+   HERO OVERLAY
+========================================================= */
+
+.villa-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(8, 12, 10, 0.76) 0%,
+      rgba(8, 12, 10, 0.38) 42%,
+      rgba(8, 12, 10, 0.08) 76%
+    ),
+
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.18),
+      transparent 35%,
+      rgba(0, 0, 0, 0.25)
+    );
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.villa-hero-content {
+  position: relative;
+
+  z-index: 3;
+
+  width:
+    min(
+      calc(100% - 140px),
+      1440px
+    );
+
+  margin:
+    110px auto 0;
+
+  color:
+    var(--villa-cream);
+}
+
+.villa-hero-content h1 {
+  margin: 0;
+
+  max-width: 760px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      70px,
+      7.6vw,
+      125px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.84;
+
+  letter-spacing: -0.04em;
+}
+
+.villa-hero-content h1 em {
+  display: block;
+
+  color: #e0c696;
+
+  font-style: italic;
+}
+
+.villa-hero-content > p {
+  max-width: 470px;
+
+  margin-top: 32px;
+
+  font-size: 13px;
+
+  font-weight: 300;
+
+  line-height: 1.9;
+
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.76
+    );
+}
+
+
+/* =========================================================
+   HERO BUTTON
+========================================================= */
+
+.villa-hero-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 45px;
+
+  min-width: 260px;
+
+  margin-top: 35px;
+
+  padding:
+    18px
+    22px;
+
+  background:
+    var(--villa-cream);
+
+  color:
+    var(--villa-green);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.villa-hero-button:hover {
+  transform:
+    translateY(-2px);
+
+  background:
+    #ffffff;
+}
+
+
+/* =========================================================
+   HERO SCROLL
+========================================================= */
+
+.villa-scroll {
+  position: absolute;
+
+  z-index: 3;
+
+  right: 6vw;
+  bottom: 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.82
+    );
+}
+
+.villa-scroll span {
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.24em;
+
+  text-transform: uppercase;
+}
+
+.villa-scroll-line {
+  width: 70px;
+  height: 1px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.65
+    );
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.villa-intro {
+  padding:
+    clamp(
+      120px,
+      12vw,
+      200px
+    )
+    0;
+
+  background:
+    var(--villa-cream);
+}
+
+.villa-intro-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.25fr)
+    minmax(280px, 0.55fr);
+
+  gap:
+    clamp(
+      70px,
+      10vw,
+      170px
+    );
+
+  align-items: end;
+}
+
+.villa-intro h2 {
+  margin: 0;
+
+  max-width: 920px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      62px,
+      6vw,
+      102px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.035em;
+
+  color:
+    var(--villa-green);
+}
+
+.villa-intro h2 em {
+  display: block;
+
+  color:
+    var(--villa-gold);
+
+  font-style: italic;
+}
+
+.villa-intro-copy {
+  max-width: 470px;
+}
+
+.villa-intro-copy p {
+  margin:
+    0
+    0
+    22px;
+
+  font-size: 13px;
+
+  font-weight: 300;
+
+  line-height: 1.95;
+
+  color:
+    var(--villa-text);
+}
+
+
+/* =========================================================
+   FEATURE SECTIONS
+========================================================= */
+
+.villa-feature {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.35fr)
+    minmax(320px, 0.65fr);
+
+  min-height: 760px;
+
+  background:
+    #e9e3d8;
+}
+
+.villa-feature-reverse {
+  grid-template-columns:
+    minmax(320px, 0.65fr)
+    minmax(0, 1.35fr);
+}
+
+
+/* =========================================================
+   FEATURE IMAGE
+========================================================= */
+
+.villa-feature-image {
+  min-height: 760px;
+
+  overflow: hidden;
+}
+
+.villa-feature-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position:
+    center center;
+
+  transform:
+    scale(1.05);
+
+  transition:
+    transform
+    0.8s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    );
+}
+
+.villa-feature-image:hover img {
+  transform:
+    scale(1.08);
+}
+
+
+/* =========================================================
+   FEATURE COPY
+========================================================= */
+
+.villa-feature-copy {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding:
+    80px
+    clamp(
+      50px,
+      6vw,
+      110px
+    );
+
+  background:
+    var(--villa-cream);
+}
+
+.villa-feature-reverse .villa-feature-image {
+  order: 2;
+}
+
+.villa-feature-reverse .villa-feature-copy {
+  order: 1;
+
+  background:
+    var(--villa-green);
+
+  color:
+    var(--villa-cream);
+}
+
+.villa-feature-copy h2 {
+  margin: 0;
+
+  max-width: 520px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      52px,
+      4.8vw,
+      82px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.03em;
+
+  color:
+    var(--villa-green);
+}
+
+.villa-feature-reverse .villa-feature-copy h2 {
+  color:
+    var(--villa-cream);
+}
+
+.villa-feature-copy h2 em {
+  display: block;
+
+  color:
+    var(--villa-gold);
+
+  font-style: italic;
+}
+
+.villa-feature-copy > p {
+  max-width: 450px;
+
+  margin-top: 30px;
+
+  font-size: 13px;
+
+  font-weight: 300;
+
+  line-height: 1.9;
+
+  color:
+    var(--villa-text);
+}
+
+.villa-feature-reverse .villa-feature-copy > p {
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.68
+    );
+}
+
+
+/* =========================================================
+   FEATURE LIST
+========================================================= */
+
+.villa-feature-copy ul {
+  margin:
+    35px
+    0
+    0;
+
+  padding: 0;
+
+  list-style: none;
+
+  max-width: 440px;
+
+  border-top:
+    1px solid
+    rgba(
+      30,
+      41,
+      36,
+      0.18
+    );
+}
+
+.villa-feature-copy li {
+  padding:
+    13px
+    0;
+
+  border-bottom:
+    1px solid
+    rgba(
+      30,
+      41,
+      36,
+      0.13
+    );
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  color:
+    rgba(
+      30,
+      41,
+      36,
+      0.75
+    );
+}
+
+.villa-feature-reverse .villa-feature-copy ul {
+  border-top-color:
+    rgba(
+      244,
+      240,
+      232,
+      0.18
+    );
+}
+
+.villa-feature-reverse .villa-feature-copy li {
+  border-bottom-color:
+    rgba(
+      244,
+      240,
+      232,
+      0.13
+    );
+
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.76
+    );
+}
+
+
+/* =========================================================
+   EXTERIOR
+========================================================= */
+
+.villa-exterior {
+  padding:
+    clamp(
+      120px,
+      11vw,
+      190px
+    )
+    0;
+
+  background:
+    var(--villa-green-dark);
+
+  color:
+    var(--villa-cream);
+}
+
+.villa-exterior-heading {
+  max-width: 830px;
+
+  margin-bottom: 70px;
+}
+
+.villa-exterior-heading h2 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      68px,
+      7vw,
+      115px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.86;
+
+  letter-spacing: -0.04em;
+}
+
+.villa-exterior-heading h2 em {
+  display: block;
+
+  color:
+    #d9bd88;
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   EXTERIOR IMAGE
+========================================================= */
+
+.villa-exterior-image {
+  width: 100%;
+
+  height:
+    clamp(
+      520px,
+      62vw,
+      820px
+    );
+
+  overflow: hidden;
+}
+
+.villa-exterior-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position:
+    center center;
+
+  transform:
+    scale(1.14);
+}
+
+
+/* =========================================================
+   EXTERIOR COPY
+========================================================= */
+
+.villa-exterior-copy {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  margin-top: 55px;
+}
+
+.villa-exterior-copy p {
+  max-width: 480px;
+
+  margin: 0;
+
+  font-size: 13px;
+
+  font-weight: 300;
+
+  line-height: 1.95;
+
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.66
+    );
+}
+
+
+/* =========================================================
+   POOL
+========================================================= */
+
+.villa-pool {
+  position: relative;
+
+  min-height: 90vh;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    var(--villa-green-dark);
+}
+
+.villa-pool-image {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+}
+
+.villa-pool-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform:
+    scale(1.08);
+}
+
+.villa-pool-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(7, 11, 9, 0.72),
+      rgba(7, 11, 9, 0.28)
+      50%,
+      rgba(7, 11, 9, 0.06)
+    ),
+
+    linear-gradient(
+      0deg,
+      rgba(7, 11, 9, 0.25),
+      transparent
+    );
+}
+
+.villa-pool-content {
+  position: relative;
+
+  z-index: 2;
+
+  width:
+    min(
+      calc(100% - 140px),
+      1440px
+    );
+
+  margin:
+    0 auto;
+
+  color:
+    var(--villa-cream);
+}
+
+.villa-pool-content h2 {
+  margin: 0;
+
+  max-width: 700px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      65px,
+      7vw,
+      115px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.85;
+
+  letter-spacing: -0.04em;
+}
+
+.villa-pool-content h2 em {
+  display: block;
+
+  color:
+    #dec394;
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.villa-details {
+  padding:
+    120px
+    0;
+
+  background:
+    var(--villa-cream);
+}
+
+.villa-details-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      1fr
+    );
+
+  border-top:
+    1px solid
+    rgba(
+      30,
+      41,
+      36,
+      0.14
+    );
+}
+
+.villa-detail {
+  padding:
+    40px
+    30px
+    45px
+    0;
+
+  border-right:
+    1px solid
+    rgba(
+      30,
+      41,
+      36,
+      0.11
+    );
+}
+
+.villa-detail:not(:first-child) {
+  padding-left: 30px;
+}
+
+.villa-detail:last-child {
+  border-right: 0;
+}
+
+.villa-detail > span {
+  font-size: 9px;
+
+  letter-spacing: 0.18em;
+
+  color:
+    var(--villa-gold);
+}
+
+.villa-detail h3 {
+  margin:
+    28px
+    0
+    0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 40px;
+
+  font-weight: 400;
+
+  color:
+    var(--villa-green);
+}
+
+.villa-detail p {
+  margin-top: 15px;
+
+  font-size: 12px;
+
+  font-weight: 300;
+
+  line-height: 1.8;
+
+  color:
+    var(--villa-text);
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.villa-final {
+  min-height: 80vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    120px
+    30px;
+
+  text-align: center;
+
+  background:
+    var(--villa-green-dark);
+
+  color:
+    var(--villa-cream);
+}
+
+.villa-final-content {
+  max-width: 900px;
+}
+
+.villa-final h2 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      75px,
+      9vw,
+      140px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.80;
+
+  letter-spacing: -0.04em;
+}
+
+.villa-final h2 em {
+  display: block;
+
+  color:
+    var(--villa-gold);
+
+  font-style: italic;
+}
+
+.villa-final p {
+  max-width: 440px;
+
+  margin:
+    38px
+    auto
+    0;
+
+  font-size: 13px;
+
+  font-weight: 300;
+
+  line-height: 1.9;
+
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.66
+    );
+}
+
+.villa-final-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 50px;
+
+  min-width: 260px;
+
+  margin-top: 40px;
+
+  padding:
+    18px
+    22px;
+
+  background:
+    var(--villa-cream);
+
+  color:
+    var(--villa-green);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  transition:
+    transform
+    0.3s ease,
+    background
+    0.3s ease;
+}
+
+.villa-final-button:hover {
+  transform:
+    translateY(-2px);
+
+  background:
+    #ffffff;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .villa-container,
+  .villa-hero-content,
+  .villa-pool-content {
+    width:
+      calc(
+        100% - 80px
+      );
+  }
+
+
+  .villa-intro-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 50px;
+  }
+
+
+  .villa-intro-copy {
+    max-width: 620px;
+  }
+
+
+  .villa-feature,
+  .villa-feature-reverse {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .villa-feature-image,
+  .villa-feature-copy {
+    min-height: auto;
+  }
+
+
+  .villa-feature-image {
+    height: 650px;
+  }
+
+
+  .villa-feature-reverse .villa-feature-image,
+  .villa-feature-reverse .villa-feature-copy {
+    order: initial;
+  }
+
+
+  .villa-feature-copy {
+    padding:
+      90px
+      40px;
+  }
+
+
+  .villa-details-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        1fr
+      );
+  }
+
+
+  .villa-detail:nth-child(2) {
+    border-right: 0;
+  }
+
+
+  .villa-detail:nth-child(3),
+  .villa-detail:nth-child(4) {
+    border-top:
+      1px solid
+      rgba(
+        30,
+        41,
+        36,
+        0.11
+      );
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .villa-container,
+  .villa-hero-content,
+  .villa-pool-content {
+    width:
+      calc(
+        100% - 40px
+      );
+  }
+
+
+  .villa-hero {
+    min-height:
+      760px;
+  }
+
+
+  .villa-hero-content {
+    margin-top:
+      70px;
+  }
+
+
+  .villa-hero-content h1 {
+    font-size:
+      clamp(
+        56px,
+        15vw,
+        82px
+      );
+  }
+
+
+  .villa-scroll {
+    display: none;
+  }
+
+
+  .villa-intro {
+    padding:
+      100px
+      0;
+  }
+
+
+  .villa-intro h2 {
+    font-size:
+      clamp(
+        52px,
+        13vw,
+        74px
+      );
+  }
+
+
+  .villa-feature-image {
+    height: 480px;
+  }
+
+
+  .villa-feature-copy {
+    padding:
+      80px
+      20px;
+  }
+
+
+  .villa-feature-copy h2 {
+    font-size:
+      clamp(
+        50px,
+        13vw,
+        70px
+      );
+  }
+
+
+  .villa-exterior {
+    padding:
+      100px
+      0;
+  }
+
+
+  .villa-exterior-heading h2 {
+    font-size:
+      clamp(
+        58px,
+        15vw,
+        82px
+      );
+  }
+
+
+  .villa-exterior-image {
+    height: 470px;
+  }
+
+
+  .villa-pool {
+    min-height:
+      700px;
+  }
+
+
+  .villa-pool-content h2 {
+    font-size:
+      clamp(
+        58px,
+        15vw,
+        82px
+      );
+  }
+
+
+  .villa-details {
+    padding:
+      90px
+      0;
+  }
+
+
+  .villa-details-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .villa-detail,
+  .villa-detail:not(:first-child) {
+    padding:
+      35px
+      0;
+
+    border-right: 0;
+
+    border-bottom:
+      1px solid
+      rgba(
+        30,
+        41,
+        36,
+        0.11
+      );
+  }
+
+
+  .villa-detail:nth-child(3),
+  .villa-detail:nth-child(4) {
+    border-top: 0;
+  }
+
+
+  .villa-final {
+    min-height:
+      700px;
+  }
+
+
+  .villa-final h2 {
+    font-size:
+      clamp(
+        60px,
+        16vw,
+        88px
+      );
+  }
+
+}

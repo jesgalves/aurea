@@ -1,0 +1,1245 @@
+/* =========================================================
+   AURÉA — SUÍTES
+========================================================= */
+
+
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
+
+:root {
+  --aurea-cream: #f4f0e8;
+  --aurea-soft: #e9e3d8;
+
+  --aurea-green: #1e2924;
+  --aurea-green-dark: #111815;
+
+  --aurea-gold: #b59a6a;
+
+  --aurea-text:
+    rgba(
+      30,
+      41,
+      36,
+      0.62
+    );
+}
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+.suites-page {
+  margin: 0;
+
+  background: var(--aurea-cream);
+
+  color: var(--aurea-green);
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  overflow-x: hidden;
+}
+
+
+.suites-page *,
+.suites-page *::before,
+.suites-page *::after {
+  box-sizing: border-box;
+}
+
+
+.suites-page img {
+  display: block;
+
+  max-width: 100%;
+}
+
+
+.suites-page a {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.suites-container {
+  width:
+    min(
+      calc(100% - 140px),
+      1440px
+    );
+
+  margin:
+    0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.suites-header {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  z-index: 100;
+
+  width: 100%;
+  height: 105px;
+
+  display: flex;
+
+  align-items: center;
+
+  color: var(--aurea-green);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.suites-logo {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  z-index: 10;
+}
+
+
+.suites-logo img {
+  width: 112px;
+
+  height: auto;
+
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(14%)
+    sepia(15%)
+    saturate(600%)
+    hue-rotate(100deg)
+    brightness(88%);
+}
+
+
+/* =========================================================
+   NAV
+========================================================= */
+
+.suites-nav {
+  position: absolute;
+
+  top: 50%;
+
+  transform:
+    translateY(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 44px;
+}
+
+
+.suites-nav-left {
+  right:
+    calc(
+      50% + 145px
+    );
+}
+
+
+.suites-nav-right {
+  left:
+    calc(
+      50% + 145px
+    );
+}
+
+
+.suites-nav a {
+  position: relative;
+
+  color: var(--aurea-green);
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  opacity: 0.8;
+}
+
+
+.suites-nav a:hover,
+.suites-nav a.active {
+  opacity: 1;
+}
+
+
+.suites-nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -9px;
+
+  width: 100%;
+  height: 1px;
+
+  background: var(--aurea-green);
+
+  transform:
+    scaleX(0);
+
+  transition:
+    transform
+    0.3s ease;
+}
+
+
+.suites-nav a:hover::after,
+.suites-nav a.active::after {
+  transform:
+    scaleX(1);
+}
+
+
+/* =========================================================
+   ELEMENTOS TIPOGRÁFICOS
+========================================================= */
+
+.eyebrow,
+.suite-number,
+.suite-name {
+  display: block;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.24em;
+
+  text-transform: uppercase;
+
+  color: var(--aurea-gold);
+}
+
+
+.eyebrow.light {
+  color: #d8c295;
+}
+
+
+/* =========================================================
+   ABERTURA
+========================================================= */
+
+.suites-opening {
+  padding-top: 160px;
+
+  background: var(--aurea-cream);
+}
+
+
+/* =========================================================
+   ABERTURA CONTEÚDO
+========================================================= */
+
+.suites-opening-content {
+  min-height: 280px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.4fr)
+    minmax(290px, 0.55fr);
+
+  gap: 120px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   ABERTURA TÍTULO
+========================================================= */
+
+.suites-opening-title h1 {
+  margin:
+    25px
+    0
+    0;
+
+  max-width: 790px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      65px,
+      6.3vw,
+      105px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.04em;
+
+  color: var(--aurea-green);
+}
+
+
+.suites-opening-title h1 em {
+  display: block;
+
+  margin-top: 7px;
+
+  color: var(--aurea-gold);
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   ABERTURA TEXTO
+========================================================= */
+
+.suites-opening-copy {
+  max-width: 390px;
+
+  padding-top: 36px;
+}
+
+
+.suites-opening-copy p {
+  margin:
+    0
+    0
+    26px;
+
+  font-size: 12px;
+
+  font-weight: 300;
+
+  line-height: 1.9;
+
+  color:
+    rgba(
+      30,
+      41,
+      36,
+      0.58
+    );
+}
+
+
+/* =========================================================
+   IMAGEM ABERTURA
+========================================================= */
+
+.suites-opening-image {
+  width: 100%;
+
+  height:
+    clamp(
+      400px,
+      44vw,
+      670px
+    );
+
+  overflow: hidden;
+}
+
+
+.suites-opening-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center center;
+}
+
+
+/* =========================================================
+   SEÇÕES DAS SUÍTES
+========================================================= */
+
+.suite-section {
+  padding:
+    75px
+    0;
+
+  background: var(--aurea-cream);
+
+  color: var(--aurea-green);
+}
+
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.suite-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(280px, 0.62fr)
+    minmax(0, 1.38fr);
+
+  gap:
+    clamp(
+      65px,
+      8vw,
+      130px
+    );
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   COPY
+========================================================= */
+
+.suite-copy {
+  padding-top: 12px;
+
+  max-width: 390px;
+}
+
+
+.suite-number {
+  margin-bottom: 17px;
+}
+
+
+.suite-name {
+  margin-bottom: 26px;
+
+  color: var(--aurea-green);
+}
+
+
+.suite-copy h2 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      45px,
+      4vw,
+      70px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.93;
+
+  letter-spacing: -0.03em;
+
+  color: var(--aurea-green);
+}
+
+
+.suite-copy h2 em {
+  display: block;
+
+  color: var(--aurea-gold);
+
+  font-style: italic;
+}
+
+
+.suite-description {
+  margin:
+    30px
+    0
+    0;
+
+  font-size: 12px;
+
+  font-weight: 300;
+
+  line-height: 1.85;
+
+  color:
+    rgba(
+      30,
+      41,
+      36,
+      0.62
+    );
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.suite-features {
+  margin:
+    32px
+    0
+    0;
+
+  padding: 0;
+
+  list-style: none;
+
+  border-top:
+    1px solid
+    rgba(
+      30,
+      41,
+      36,
+      0.22
+    );
+}
+
+
+.suite-features li {
+  padding:
+    10px
+    0;
+
+  border-bottom:
+    1px solid
+    rgba(
+      30,
+      41,
+      36,
+      0.18
+    );
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
+
+  color:
+    rgba(
+      30,
+      41,
+      36,
+      0.82
+    );
+}
+
+
+/* =========================================================
+   LINK
+========================================================= */
+
+.suite-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 35px;
+
+  margin-top: 31px;
+
+  padding-bottom: 6px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      30,
+      41,
+      36,
+      0.5
+    );
+
+  color: var(--aurea-green);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+
+.suite-arrow {
+  font-size: 16px;
+
+  transition:
+    transform
+    0.3s ease;
+}
+
+
+.suite-link:hover .suite-arrow {
+  transform:
+    translateX(5px);
+}
+
+
+/* =========================================================
+   GALERIA
+========================================================= */
+
+.suite-gallery {
+  display: grid;
+
+  grid-template-rows:
+    minmax(0, 1.35fr)
+    minmax(0, 0.9fr);
+
+  gap: 10px;
+
+  min-width: 0;
+}
+
+
+.suite-gallery-large {
+  height:
+    clamp(
+      350px,
+      34vw,
+      530px
+    );
+
+  overflow: hidden;
+}
+
+
+.suite-gallery-small {
+  height:
+    clamp(
+      240px,
+      23vw,
+      360px
+    );
+
+  overflow: hidden;
+}
+
+
+.suite-gallery img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center center;
+}
+
+
+/* =========================================================
+   DETAIL CROPS
+========================================================= */
+
+.suite-gallery-detail img {
+  transform:
+    scale(1.22);
+
+  object-position:
+    center 60%;
+}
+
+
+/* =========================================================
+   BOSQUE
+========================================================= */
+
+.suite-bosque {
+  background:
+    var(--aurea-green-dark);
+
+  color:
+    var(--aurea-cream);
+
+  padding:
+    80px
+    0;
+}
+
+
+.suite-bosque .suite-name,
+.suite-bosque .suite-copy h2 {
+  color:
+    var(--aurea-cream);
+}
+
+
+.suite-bosque .suite-description {
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.68
+    );
+}
+
+
+.suite-bosque .suite-features {
+  border-top-color:
+    rgba(
+      244,
+      240,
+      232,
+      0.26
+    );
+}
+
+
+.suite-bosque .suite-features li {
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.85
+    );
+
+  border-bottom-color:
+    rgba(
+      244,
+      240,
+      232,
+      0.22
+    );
+}
+
+
+.suite-bosque .suite-link {
+  color:
+    var(--aurea-cream);
+
+  border-bottom-color:
+    rgba(
+      244,
+      240,
+      232,
+      0.55
+    );
+}
+
+
+/* =========================================================
+   PEDRA
+========================================================= */
+
+.suite-pedra {
+  background:
+    #e9e3d8;
+}
+
+
+/* =========================================================
+   BRUMA
+========================================================= */
+
+.suite-bruma {
+  background:
+    var(--aurea-cream);
+}
+
+
+/* =========================================================
+   ARAUCÁRIA
+========================================================= */
+
+.suite-araucaria {
+  background:
+    #17201c;
+
+  color:
+    var(--aurea-cream);
+}
+
+
+.suite-araucaria .suite-name,
+.suite-araucaria .suite-copy h2 {
+  color:
+    var(--aurea-cream);
+}
+
+
+.suite-araucaria .suite-description {
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.66
+    );
+}
+
+
+.suite-araucaria .suite-features {
+  border-top-color:
+    rgba(
+      244,
+      240,
+      232,
+      0.22
+    );
+}
+
+
+.suite-araucaria .suite-features li {
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.82
+    );
+
+  border-bottom-color:
+    rgba(
+      244,
+      240,
+      232,
+      0.18
+    );
+}
+
+
+.suite-araucaria .suite-link {
+  color:
+    var(--aurea-cream);
+
+  border-bottom-color:
+    rgba(
+      244,
+      240,
+      232,
+      0.50
+    );
+}
+
+
+/* =========================================================
+   VILLA
+========================================================= */
+
+.suite-villa {
+  background:
+    #e9e3d8;
+
+  padding-bottom:
+    110px;
+}
+
+
+/* =========================================================
+   CTA FINAL
+========================================================= */
+
+.suites-final {
+  min-height: 76vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    100px
+    30px;
+
+  background:
+    var(--aurea-green-dark);
+
+  color:
+    var(--aurea-cream);
+
+  text-align: center;
+}
+
+
+.suites-final-content {
+  max-width: 850px;
+}
+
+
+.suites-final h2 {
+  margin:
+    25px
+    0
+    0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      70px,
+      8vw,
+      125px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.8;
+
+  letter-spacing: -0.04em;
+}
+
+
+.suites-final h2 em {
+  display: block;
+
+  color:
+    var(--aurea-gold);
+
+  font-style: italic;
+}
+
+
+.suites-final p {
+  max-width: 430px;
+
+  margin:
+    36px
+    auto
+    0;
+
+  font-size: 12px;
+
+  line-height: 1.9;
+
+  color:
+    rgba(
+      244,
+      240,
+      232,
+      0.65
+    );
+}
+
+
+.suites-final-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 50px;
+
+  margin-top: 38px;
+
+  padding:
+    17px
+    22px;
+
+  background:
+    var(--aurea-cream);
+
+  color:
+    var(--aurea-green-dark);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HOVER IMAGENS
+========================================================= */
+
+.suite-gallery-large img,
+.suite-gallery-small img,
+.suites-opening-image img {
+  transition:
+    transform
+    0.8s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    );
+}
+
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .suites-container {
+    width:
+      calc(
+        100% - 80px
+      );
+  }
+
+
+  .suites-header {
+    height: 100px;
+  }
+
+
+  .suites-logo img {
+    width: 105px;
+  }
+
+
+  .suites-nav {
+    gap: 24px;
+  }
+
+
+  .suites-nav-left {
+    right:
+      calc(
+        50% + 125px
+      );
+  }
+
+
+  .suites-nav-right {
+    left:
+      calc(
+        50% + 125px
+      );
+  }
+
+
+  .suites-nav a {
+    font-size: 8px;
+  }
+
+
+  .suites-opening-content {
+    grid-template-columns:
+      1fr;
+
+    gap: 35px;
+
+    padding-bottom: 70px;
+  }
+
+
+  .suites-opening-copy {
+    max-width: 580px;
+
+    padding-top: 0;
+  }
+
+
+  .suite-layout {
+    grid-template-columns:
+      0.7fr
+      1.3fr;
+
+    gap: 50px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE HEADER
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .suites-nav {
+    display: none;
+  }
+
+
+  .suites-header {
+    justify-content: center;
+
+    height: 90px;
+  }
+
+
+  .suites-logo img {
+    width: 110px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .suites-container {
+    width:
+      calc(
+        100% - 40px
+      );
+  }
+
+
+  .suites-opening {
+    padding-top: 125px;
+  }
+
+
+  .suites-opening-content {
+    min-height: auto;
+
+    padding-bottom: 60px;
+  }
+
+
+  .suites-opening-title h1 {
+    font-size:
+      clamp(
+        52px,
+        14vw,
+        76px
+      );
+  }
+
+
+  .suites-opening-image {
+    height: 390px;
+  }
+
+
+  .suite-section,
+  .suite-bosque {
+    padding:
+      80px
+      0;
+  }
+
+
+  .suite-layout {
+    grid-template-columns:
+      1fr;
+
+    gap: 50px;
+  }
+
+
+  .suite-copy {
+    max-width: 100%;
+  }
+
+
+  .suite-copy h2 {
+    max-width: 520px;
+
+    font-size:
+      clamp(
+        50px,
+        13vw,
+        70px
+      );
+  }
+
+
+  .suite-gallery-large {
+    height: 390px;
+  }
+
+
+  .suite-gallery-small {
+    height: 300px;
+  }
+
+
+  .suite-features {
+    max-width: 420px;
+  }
+
+
+  .suites-final {
+    min-height: 680px;
+  }
+
+
+  .suites-final h2 {
+    font-size:
+      clamp(
+        60px,
+        16vw,
+        88px
+      );
+  }
+
+}
+
+/* =========================================================
+   PRIMEIRA IMAGEM DE CADA SUÍTE
+   CORTE + HOVER SUTIL
+========================================================= */
+
+.suite-gallery-large {
+    overflow: hidden;
+}
+
+.suite-gallery-large img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: cover;
+    object-position: 54% center;
+
+    /* enquadramento normal */
+    transform: scale(1.25);
+    transform-origin: center center;
+
+    /* movimento elegante e lento */
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Zoom-out MUITO sutil */
+.suite-gallery-large:hover img {
+    transform: scale(1.28);
+}
