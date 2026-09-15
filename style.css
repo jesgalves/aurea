@@ -1706,3 +1706,31 @@ button {
 .main-button .arrow {
   color: #17251f !important;
 }
+
+/* =========================================================
+   CTA RESERVAS — HOME
+========================================================= */
+
+.booking-button {
+  background: #1d3028 !important;
+  color: #f4f0e8 !important;
+
+  border: 1px solid rgba(199, 180, 138, 0.25);
+}
+
+.booking-button span {
+  color: #f4f0e8 !important;
+}
+
+.booking-button .arrow,
+.booking-button span:last-child {
+  color: #c7b48a !important;
+}
+
+
+/* HOVER — DESKTOP */
+
+.booking-button:hover {
+  background: #243a31 !important;
+  border-color: rgba(199, 180, 138, 0.5);
+}
