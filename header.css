@@ -687,3 +687,95 @@
 body.menu-open {
   overflow: hidden;
 }
+
+/* =========================================================
+   CORREÇÃO MENU MOBILE — TELA REAL
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .mobile-menu {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    box-sizing: border-box;
+
+    padding:
+      120px
+      40px
+      35px;
+
+    background: #17251f;
+
+    overflow-y: auto;
+
+    justify-content: space-between;
+  }
+
+
+  /* LINKS */
+
+  .mobile-menu-nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+    width: 100%;
+  }
+
+
+  .mobile-menu-nav a {
+    font-size: clamp(38px, 11vw, 52px);
+
+    line-height: 0.95;
+
+    letter-spacing: -0.03em;
+  }
+
+
+  /* PARTE INFERIOR */
+
+  .mobile-menu-footer {
+    width: 100%;
+
+    margin-top: 35px;
+
+    padding-top: 22px;
+  }
+
+
+  .mobile-menu-reserve {
+    width: 100%;
+
+    padding: 15px 0;
+  }
+
+}
+
+
+/* CELULARES MENORES */
+
+@media (max-width: 480px) {
+
+  .mobile-menu {
+    padding:
+      105px
+      28px
+      28px;
+  }
+
+
+  .mobile-menu-nav a {
+    font-size: clamp(36px, 10.5vw, 48px);
+
+    line-height: 0.98;
+  }
+
+}
