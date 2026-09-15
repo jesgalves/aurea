@@ -1734,3 +1734,7 @@ button {
   background: #243a31 !important;
   border-color: rgba(199, 180, 138, 0.5);
 }
+
+.hero-title {
+  font-family: Georgia, serif !important;
+}
