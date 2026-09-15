@@ -128,6 +128,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
+  if (window.innerWidth > 768) {
+
   window.addEventListener(
     "scroll",
     requestParallaxUpdate,
@@ -136,14 +138,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   );
 
-
   window.addEventListener(
     "resize",
     requestParallaxUpdate
   );
 
+}
 
+
+  if (window.innerWidth > 768) {
   updateParallax();
+}
 
 
   /* =========================================================
