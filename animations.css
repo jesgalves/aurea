@@ -314,22 +314,8 @@ span:last-child {
 ========================================================= */
 
 .hero-reveal {
-  opacity: 0;
-
-  transform:
-    translateY(24px);
-
-  animation:
-    heroContentReveal
-    1s
-    0.2s
-    cubic-bezier(
-      0.22,
-      1,
-      0.36,
-      1
-    )
-    forwards;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
