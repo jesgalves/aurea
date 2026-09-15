@@ -779,3 +779,62 @@ body.menu-open {
   }
 
 }
+
+/* =========================================================
+   REFINAMENTO FINAL — MENU MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+  /* DISTRIBUIÇÃO DO MENU */
+
+  .mobile-menu {
+    justify-content: flex-start;
+  }
+
+
+  /* LINKS */
+
+  .mobile-menu-nav {
+    margin-top: 55px;
+  }
+
+
+  .mobile-menu-nav a {
+    font-size: clamp(38px, 10.5vw, 50px);
+
+    line-height: 1.02;
+  }
+
+
+  /* CTA INFERIOR */
+
+  .mobile-menu-footer {
+    margin-top: auto;
+
+    padding-top: 22px;
+
+    border-top:
+      1px solid
+      rgba(244, 240, 232, 0.22);
+  }
+
+
+  .mobile-menu-reserve,
+  .mobile-menu-reserve span {
+    color: #f4f0e8 !important;
+  }
+
+
+  .mobile-menu-reserve {
+    font-size: 10px;
+
+    letter-spacing: 0.14em;
+  }
+
+
+  .mobile-menu-reserve span:last-child {
+    color: #c7b48a !important;
+  }
+
+}
